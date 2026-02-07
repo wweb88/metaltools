@@ -100,6 +100,19 @@
             ></p-select>
         </div>
         <div class="">
+            <h3>Selecciona un Usuario:</h3>
+            <p-select 
+              [options]="usuariosDisponibles" 
+              [(ngModel)]="usuarioSeleccionado"
+              placeholder="Todos los usuarios"
+              optionLabel="label"
+              optionValue="value"
+              (onChange)="onUsuarioChange()"
+              [showClear]="true"
+              [style]="{'width': '100%'}"
+            ></p-select>
+        </div>
+        <div class="">
             <div class="typeBox">
                 @for (tipo of tiposInfo; track tipo.name) {
                     <div class="typeBox-type">
@@ -123,6 +136,25 @@
                 (ngModelChange)="aplicarBusqueda()"
                 style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px;"
             />
+        </div>
+        <div class="">
+            <p-button 
+                label="Limpiar Filtros" 
+                (click)="limpiarFiltros()"
+                severity="secondary"
+                [style]="{'width': '100%'}"
+                icon="pi pi-times"
+            ></p-button>
+        </div>
+        <div class="">
+            <p-button 
+                label="Generar Equipo Aleatorio" 
+                (click)="generarEquipoAleatorio()"
+                severity="success"
+                [style]="{'width': '100%'}"
+                icon="pi pi-star"
+                [disabled]="!nivelSeleccionado || resultadosTabla.length === 0"
+            ></p-button>
         </div>
     </div>
 

@@ -82,7 +82,9 @@ export class SquadToolComponent implements OnInit {
   
   // Filtros
   nivelesDisponibles = Array.from({ length: 20 }, (_, i) => ({ label: `Nivel ${i + 1}`, value: i + 1 }));
+  usuariosDisponibles: { label: string; value: string }[] = [];
   nivelSeleccionado: number | null = null;
+  usuarioSeleccionado: string | null = null;
   tiposSeleccionados: string[] = [];
   
   // Resultados
@@ -166,6 +168,8 @@ export class SquadToolComponent implements OnInit {
           console.log('=========================================================');
           
           this.excelData = this.jugadores;
+          this.actualizarUsuariosDisponibles();
+          this.inicializarTiposSeleccionados();
           this.cargando = false;
         } catch (error) {
           console.error('Error al procesar el archivo de Google Sheets:', error);
@@ -197,9 +201,35 @@ export class SquadToolComponent implements OnInit {
   }
 
 
+  actualizarUsuariosDisponibles(): void {
+    this.usuariosDisponibles = this.jugadores.map(jugador => ({
+      label: jugador.jugador,
+      value: jugador.jugador
+    }));
+  }
+
+  inicializarTiposSeleccionados(): void {
+    this.tiposSeleccionados = [...this.tiposAviones];
+  }
+
   onNivelChange(): void {
     this.seleccionados = [];
     this.aplicarFiltros();
+  }
+
+  onUsuarioChange(): void {
+    this.seleccionados = [];
+    this.aplicarFiltros();
+  }
+
+  limpiarFiltros(): void {
+    this.nivelSeleccionado = null;
+    this.usuarioSeleccionado = null;
+    this.tiposSeleccionados = [...this.tiposAviones];
+    this.terminoBusqueda = '';
+    this.seleccionados = [];
+    this.resultadosTabla = [];
+    this.resultadosFiltrados = [];
   }
   
   aplicarFiltros(): void {
@@ -211,8 +241,13 @@ export class SquadToolComponent implements OnInit {
     
     const resultados: ResultadoTabla[] = [];
     
+    // Determinar qué jugadores filtrar
+    const jugadoresAFiltrar = this.usuarioSeleccionado
+      ? this.jugadores.filter(j => j.jugador === this.usuarioSeleccionado)
+      : this.jugadores;
+    
     // Recorrer cada jugador
-    this.jugadores.forEach(jugador => {
+    jugadoresAFiltrar.forEach(jugador => {
       // Recorrer cada avión del jugador
       jugador.aviones.forEach(avion => {
         // Verificar si el nivel coincide
@@ -294,5 +329,40 @@ export class SquadToolComponent implements OnInit {
 
   cerrarModalPlantilla(): void {
     this.mostrarModalPlantilla = false;
+  }
+
+  generarEquipoAleatorio(): void {
+    if (!this.nivelSeleccionado) {
+      return;
+    }
+
+    const equipoAleatorio: ResultadoTabla[] = [];
+    
+    // Para cada tipo de avión
+    for (const tipo of this.tiposAviones) {
+      // Obtener todos los aviones del tipo actual que coincidan con el nivel
+      const avionesDelTipo = this.resultadosTabla.filter(
+        resultado => resultado.tipo === tipo
+      );
+
+      if (avionesDelTipo.length > 0) {
+        // Seleccionar uno aleatorio
+        const indiceAleatorio = Math.floor(Math.random() * avionesDelTipo.length);
+        const aviónSeleccionado = avionesDelTipo[indiceAleatorio];
+        
+        equipoAleatorio.push({
+          ...aviónSeleccionado,
+          seleccionado: true
+        });
+      }
+    }
+
+    // Si encontramos exactamente 5 aviones (uno de cada tipo)
+    if (equipoAleatorio.length === this.tiposAviones.length) {
+      this.seleccionados = equipoAleatorio;
+      console.log('Equipo aleatorio generado:', equipoAleatorio);
+    } else {
+      console.warn('No se pudo generar un equipo completo. Tipos disponibles:', equipoAleatorio.length);
+    }
   }
 }
