@@ -1,0 +1,77 @@
+<p-breadcrumb [model]="items" [home]="home" />
+<h1 class="titleGeneral">Calculadora por Nivel</h1>
+<p class="paragraphGeneral">
+  Selecciona tu nivel actual y el nivel al que deseas llegar para saber cuántas piezas y plata necesitas.
+</p>
+
+<div class="calc-selectors boxCard">
+  <div class="selector-group">
+    <label for="currentLevel">Nivel actual</label>
+    <select id="currentLevel" [(ngModel)]="currentLevel" (ngModelChange)="onCurrentLevelChange()">
+      @for (lvl of currentLevelOptions; track lvl) {
+        <option [ngValue]="lvl">{{ lvl }}</option>
+      }
+    </select>
+  </div>
+
+  <div class="selector-arrow">→</div>
+
+  <div class="selector-group">
+    <label for="targetLevel">Nivel objetivo</label>
+    <select id="targetLevel" [(ngModel)]="targetLevel" (ngModelChange)="onTargetLevelChange()">
+      @for (lvl of targetLevelOptions; track lvl) {
+        <option [ngValue]="lvl">{{ lvl }}</option>
+      }
+    </select>
+  </div>
+</div>
+
+<div class="calc-results">
+  <div class="result-card boxCard">
+    <figure>
+      <img src="/assets/images/pieces.png" alt="Piezas necesarias">
+    </figure>
+    <div class="resultBox">
+      <span class="result-label">Piezas necesarias</span>
+      <span class="result-value">{{ totalPieces | number }}</span>
+    </div>
+  </div>
+  <div class="result-card boxCard">
+    <figure>
+      <img src="/assets/images/silver.png" alt="Plata necesaria">
+    </figure>
+    <div class="resultBox">
+      <span class="result-label">Plata necesaria</span>
+      <span class="result-value">{{ totalSilver | number }}</span>
+    </div>
+  </div>
+</div>
+
+<div class="calc-breakdown boxCard">
+  <h3>Detalle por nivel</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Salto</th>
+        <th>Piezas</th>
+        <th>Plata</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (step of stepDetails; track step.from) {
+        <tr>
+          <td>{{ step.from }} → {{ step.to }}</td>
+          <td>{{ step.pieces | number }}</td>
+          <td>{{ step.silver | number }}</td>
+        </tr>
+      }
+    </tbody>
+    <tfoot>
+      <tr>
+        <td><strong>Total</strong></td>
+        <td><strong>{{ totalPieces | number }}</strong></td>
+        <td><strong>{{ totalSilver | number }}</strong></td>
+      </tr>
+    </tfoot>
+  </table>
+</div>

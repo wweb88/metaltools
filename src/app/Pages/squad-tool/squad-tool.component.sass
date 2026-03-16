@@ -40,6 +40,8 @@
     margin: 0 0 30px 0
     &-left
         flex: 1
+        @media (max-width: 767px)
+            width: 100%
         h3
             margin: 0 0 8px 0
             padding: 0
@@ -105,3 +107,31 @@
 
 ::ng-deep .p-datatable-tbody > tr > td
     padding: 4px
+
+@media (max-width: 1023px)
+  .fileBox
+    flex-wrap: wrap
+    &-right
+      width: 100%
+  .filtersBox
+    flex-wrap: wrap
+    > div
+      flex: none
+      width: calc(50% - 15px)
+  .boxTables
+    flex-direction: column
+    .tableSelected
+      width: 100%
+
+@media (max-width: 600px)
+  .fileBox
+    flex-direction: column
+    &-right
+      width: 100%
+  .filtersBox
+    > div
+      width: 100%
+  .contentData
+    grid-template-columns: 1fr
+    &-filters, &-results, &-selected
+      grid-column: span 1
