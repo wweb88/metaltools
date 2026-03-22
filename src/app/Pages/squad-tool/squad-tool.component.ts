@@ -14,6 +14,8 @@ import { Breadcrumb } from 'primeng/breadcrumb';
 interface Avion {
   nombre: string;
   nivel: number;
+  specialSkill: number;
+  passiveAbility: number;
 }
 
 interface Jugador {
@@ -26,6 +28,7 @@ interface PlaneInfo {
   subName: string;
   type: string;
   image: string;
+  imageBig: string;
 }
 
 interface TypeInfo {
@@ -39,7 +42,11 @@ interface ResultadoTabla {
   imagenTipo: string;
   nombreCompleto: string;
   imagenAvion: string;
+  imagenBig: string;
   jugador: string;
+  nivel: number;
+  specialSkill: number;
+  passiveAbility: number;
   seleccionado?: boolean;
 }
 
@@ -58,6 +65,8 @@ export class SquadToolComponent implements OnInit {
   cargando: boolean = false;
   errorMensaje: string = '';
   mostrarModalPlantilla: boolean = false;
+  mostrarModalFiltros: boolean = false;
+  alertaModal: string = '';
   terminoBusqueda: string = '';
   resultadosFiltrados: ResultadoTabla[] = [];
   
@@ -148,12 +157,14 @@ export class SquadToolComponent implements OnInit {
             const ws: XLSX.WorkSheet = wb.Sheets[sheetName];
             const dataRows = XLSX.utils.sheet_to_json(ws, { header: 1 });
             
-            // Procesar aviones: primera columna = nombre, segunda = nivel
+            // Procesar aviones: A=nombre, B=nivel, C=specialSkill, D=passiveAbility
             const aviones = dataRows
               .filter((row: any) => row[0] && row[1] !== undefined) // Filtrar filas válidas
               .map((row: any) => ({
                 nombre: row[0],
-                nivel: Number(row[1]) || 0
+                nivel: Number(row[1]) || 0,
+                specialSkill: Number(row[2]) || 0,
+                passiveAbility: Number(row[3]) || 0
               }))
               .filter(avion => avion.nivel > 0); // Solo aviones con nivel > 0
             
@@ -213,12 +224,10 @@ export class SquadToolComponent implements OnInit {
   }
 
   onNivelChange(): void {
-    this.seleccionados = [];
     this.aplicarFiltros();
   }
 
   onUsuarioChange(): void {
-    this.seleccionados = [];
     this.aplicarFiltros();
   }
 
@@ -240,7 +249,7 @@ export class SquadToolComponent implements OnInit {
     }
     
     const resultados: ResultadoTabla[] = [];
-    
+
     // Determinar qué jugadores filtrar
     const jugadoresAFiltrar = this.usuarioSeleccionado
       ? this.jugadores.filter(j => j.jugador === this.usuarioSeleccionado)
@@ -248,6 +257,14 @@ export class SquadToolComponent implements OnInit {
     
     // Recorrer cada jugador
     jugadoresAFiltrar.forEach(jugador => {
+      const avionSeleccionadoDeEsteJugador = this.seleccionados.find(s => s.jugador === jugador.jugador);
+
+      if (avionSeleccionadoDeEsteJugador) {
+        // Solo mostrar el avión ya seleccionado (para que el usuario pueda desmarcarlo)
+        resultados.push({ ...avionSeleccionadoDeEsteJugador, seleccionado: true });
+        return;
+      }
+
       // Recorrer cada avión del jugador
       jugador.aviones.forEach(avion => {
         // Verificar si el nivel coincide
@@ -262,23 +279,30 @@ export class SquadToolComponent implements OnInit {
           if (planeInfo && this.tiposSeleccionados.includes(planeInfo.type)) {
             const tipoInfo = this.tiposInfo.find(t => t.name === planeInfo.type);
             const id = `${planeInfo.name}-${planeInfo.subName}-${jugador.jugador}`;
-            const yaSeleccionado = this.seleccionados.some(s => s.id === id);
             resultados.push({
               id: id,
               tipo: planeInfo.type,
               imagenTipo: tipoInfo?.image || '',
               nombreCompleto: `${planeInfo.name} ${planeInfo.subName}`,
               imagenAvion: planeInfo.image,
+              imagenBig: planeInfo.imageBig ? `assets/images/planes/${planeInfo.imageBig}` : '',
               jugador: jugador.jugador,
-              seleccionado: yaSeleccionado
+              nivel: avion.nivel,
+              specialSkill: avion.specialSkill,
+              passiveAbility: avion.passiveAbility,
+              seleccionado: false
             });
           }
         }
       });
     });
     
-    // Ordenar los resultados por nombre del avión
-    resultados.sort((a, b) => a.nombreCompleto.localeCompare(b.nombreCompleto));
+    // Ordenar: seleccionados primero, luego alfabético
+    resultados.sort((a, b) => {
+      if (a.seleccionado && !b.seleccionado) return -1;
+      if (!a.seleccionado && b.seleccionado) return 1;
+      return a.nombreCompleto.localeCompare(b.nombreCompleto);
+    });
     
     this.resultadosTabla = resultados;
     this.aplicarBusqueda();
@@ -300,18 +324,28 @@ export class SquadToolComponent implements OnInit {
   
   onToggleSeleccion(resultado: ResultadoTabla): void {
     const index = this.seleccionados.findIndex(s => s.id === resultado.id);
-    
+
     if (index > -1) {
       // Deseleccionar
       this.seleccionados.splice(index, 1);
-      resultado.seleccionado = false;
+      this.aplicarFiltros();
     } else {
-      // Seleccionar
+      // Verificar si ya hay un avión del mismo tipo seleccionado
+      const tipoYaSeleccionado = this.seleccionados.some(s => s.tipo === resultado.tipo);
+      if (tipoYaSeleccionado) {
+        // Deferir el reset para que Angular lo detecte como un cambio real
+        setTimeout(() => { resultado.seleccionado = false; }, 0);
+        this.mostrarAlertaModal(`Ya tienes un avión de tipo "${resultado.tipo}" en el equipo. Quítalo primero.`);
+        return;
+      }
       this.seleccionados.push({...resultado, seleccionado: true});
-      resultado.seleccionado = true;
+      this.aplicarFiltros();
     }
-    
-    console.log('Seleccionados:', this.seleccionados);
+  }
+
+  private mostrarAlertaModal(mensaje: string): void {
+    this.alertaModal = mensaje;
+    setTimeout(() => { this.alertaModal = ''; }, 4000);
   }
 
   descargarPlantilla(): void {
@@ -331,38 +365,82 @@ export class SquadToolComponent implements OnInit {
     this.mostrarModalPlantilla = false;
   }
 
+  abrirModalFiltros(): void {
+    this.mostrarModalFiltros = true;
+  }
+
+  cerrarModalFiltros(): void {
+    this.mostrarModalFiltros = false;
+  }
+
+  limpiarSeleccion(): void {
+    this.seleccionados = [];
+    this.aplicarFiltros();
+  }
+
+  removerSeleccionado(resultado: ResultadoTabla): void {
+    const index = this.seleccionados.findIndex(s => s.id === resultado.id);
+    if (index > -1) {
+      this.seleccionados.splice(index, 1);
+      this.aplicarFiltros();
+    }
+  }
+
   generarEquipoAleatorio(): void {
     if (!this.nivelSeleccionado) {
       return;
     }
 
-    const equipoAleatorio: ResultadoTabla[] = [];
-    
-    // Para cada tipo de avión
-    for (const tipo of this.tiposAviones) {
-      // Obtener todos los aviones del tipo actual que coincidan con el nivel
-      const avionesDelTipo = this.resultadosTabla.filter(
-        resultado => resultado.tipo === tipo
-      );
+    // Construir pool completo usando SOLO el nivel, ignorando otros filtros
+    const pool: ResultadoTabla[] = [];
+    const jugadoresUsados = new Set<string>();
 
-      if (avionesDelTipo.length > 0) {
-        // Seleccionar uno aleatorio
-        const indiceAleatorio = Math.floor(Math.random() * avionesDelTipo.length);
-        const aviónSeleccionado = avionesDelTipo[indiceAleatorio];
-        
-        equipoAleatorio.push({
-          ...aviónSeleccionado,
-          seleccionado: true
-        });
+    this.jugadores.forEach(jugador => {
+      jugador.aviones.forEach(avion => {
+        if (avion.nivel === this.nivelSeleccionado) {
+          const planeInfo = this.planesInfo.find(p =>
+            p.name.toLowerCase() === avion.nombre.toLowerCase() ||
+            `${p.name} ${p.subName}`.toLowerCase() === avion.nombre.toLowerCase() ||
+            `${p.name}-${p.subName}`.toLowerCase() === avion.nombre.toLowerCase()
+          );
+          if (planeInfo) {
+            const tipoInfo = this.tiposInfo.find(t => t.name === planeInfo.type);
+            pool.push({
+              id: `${planeInfo.name}-${planeInfo.subName}-${jugador.jugador}`,
+              tipo: planeInfo.type,
+              imagenTipo: tipoInfo?.image || '',
+              nombreCompleto: `${planeInfo.name} ${planeInfo.subName}`,
+              imagenAvion: planeInfo.image,
+              imagenBig: planeInfo.imageBig ? `assets/images/planes/${planeInfo.imageBig}` : '',
+              jugador: jugador.jugador,
+              nivel: avion.nivel,
+              specialSkill: avion.specialSkill,
+              passiveAbility: avion.passiveAbility,
+              seleccionado: true
+            });
+          }
+        }
+      });
+    });
+
+    const equipoAleatorio: ResultadoTabla[] = [];
+
+    // Para cada tipo de avión, elegir un avión aleatorio de un jugador no usado aún
+    for (const tipo of this.tiposAviones) {
+      const candidatos = pool.filter(r => r.tipo === tipo && !jugadoresUsados.has(r.jugador));
+      if (candidatos.length > 0) {
+        const elegido = candidatos[Math.floor(Math.random() * candidatos.length)];
+        jugadoresUsados.add(elegido.jugador);
+        equipoAleatorio.push(elegido);
       }
     }
 
-    // Si encontramos exactamente 5 aviones (uno de cada tipo)
     if (equipoAleatorio.length === this.tiposAviones.length) {
       this.seleccionados = equipoAleatorio;
-      console.log('Equipo aleatorio generado:', equipoAleatorio);
+      this.aplicarFiltros();
+      this.cerrarModalFiltros();
     } else {
-      console.warn('No se pudo generar un equipo completo. Tipos disponibles:', equipoAleatorio.length);
+      this.mostrarAlertaModal('No se pudo generar un equipo completo. No hay suficientes jugadores con aviones para cada tipo en el nivel seleccionado.');
     }
   }
 }
