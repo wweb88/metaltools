@@ -316,6 +316,13 @@
       "type": "Medium Fighter",
       "image": "https://starform-playmetalstorm-assets.s3.us-west-2.amazonaws.com/plane-icons/jet-f100-icon-solid.png",
       "imageBig": "F-100.png"
+    },
+    {
+      "name": "KF-21",
+      "subName": "Boramae",
+      "type": "Medium Fighter",
+      "image": "https://starform-playmetalstorm-assets.s3.us-west-2.amazonaws.com/plane-icons/jet-kf21-icon-solid.png",
+      "imageBig": "KF-21.png"
     }
   ]
 }
