@@ -1,7 +1,7 @@
 "use client";
 import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Settings2, Target } from "lucide-react";
+import { ArrowRight, Settings2, Target, Info } from "lucide-react";
 
 const LEVEL_DATA = [
   { from: 1,  to: 2,  pieces: 25,   silver: 75    },
@@ -190,22 +190,36 @@ export function LevelCalculatorClient() {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative">
-          <div className="glass-panel p-8 rounded-2xl space-y-6 relative overflow-hidden">
-            <div className="absolute top-0 right-0 p-32 bg-[var(--color-gaming-secondary)] opacity-5 blur-[100px] rounded-full pointer-events-none"></div>
+          <div className="glass-panel p-8 rounded-2xl space-y-6 relative">
+            <div className="absolute inset-0 overflow-hidden rounded-2xl pointer-events-none">
+              <div className="absolute top-0 right-0 p-32 bg-[var(--color-gaming-secondary)] opacity-5 blur-[100px] rounded-full"></div>
+            </div>
             
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-2">
-                <label className="text-xs font-bold text-gray-400 uppercase tracking-wider">Pestañas / Sistemas</label>
+                <div className="flex items-center gap-2 relative group w-fit">
+                  <label className="text-xs font-bold text-gray-400 uppercase tracking-wider cursor-help">Pestañas / Sistemas</label>
+                  <Info className="w-4 h-4 text-gray-500 cursor-help" />
+                  <div className="absolute bottom-full mb-2 left-0 hidden group-hover:block w-64 p-3 bg-[#0b0f19] border border-[var(--color-gaming-secondary)] rounded-lg text-xs text-gray-300 z-50 shadow-2xl">
+                    Número total de sistemas principales que tiene el avión (Fuselaje, Motores, Aviónica, Cañones, etc.). No cuentes la primera pestaña "Aeronave" porque no usa piezas de sistema.
+                  </div>
+                </div>
                 <select value={systemCount} onChange={(e) => {
                   const newCount = Number(e.target.value);
                   setSystemCount(newCount);
                   if (secondaryBranchCount > newCount) setSecondaryBranchCount(newCount);
                 }} className="w-full bg-black/60 border-2 border-white/10 rounded-xl px-4 py-3 text-lg font-black text-white focus:outline-none focus:border-[var(--color-gaming-secondary)] transition-colors">
-                  {[1, 2, 3, 4, 5, 6, 7].map(n => <option key={n} value={n}>{n}</option>)}
+                  {[1, 2, 3, 4, 5, 6].map(n => <option key={n} value={n}>{n}</option>)}
                 </select>
               </div>
               <div className="space-y-2">
-                <label className="text-xs font-bold text-gray-400 uppercase tracking-wider">Ramas Sec. (Nvl 5+)</label>
+                <div className="flex items-center gap-2 relative group w-fit">
+                  <label className="text-xs font-bold text-gray-400 uppercase tracking-wider cursor-help">Ramas Sec. (Nvl 5+)</label>
+                  <Info className="w-4 h-4 text-gray-500 cursor-help" />
+                  <div className="absolute bottom-full mb-2 left-0 hidden group-hover:block w-64 p-3 bg-[#0b0f19] border border-[var(--color-gaming-secondary)] rounded-lg text-xs text-gray-300 z-50 shadow-2xl">
+                    Cantidad de armas secundarias (usualmente misiles) que tiene tu avión. Estas mejoras aparecen a partir del Nivel 5 del avión y tienen un costo de recursos ligeramente distinto.
+                  </div>
+                </div>
                 <select value={secondaryBranchCount} onChange={(e) => setSecondaryBranchCount(Number(e.target.value))} className="w-full bg-black/60 border-2 border-white/10 rounded-xl px-4 py-3 text-lg font-black text-white focus:outline-none focus:border-[var(--color-gaming-secondary)] transition-colors">
                   {Array.from({ length: systemCount + 1 }, (_, i) => <option key={i} value={i}>{i}</option>)}
                 </select>

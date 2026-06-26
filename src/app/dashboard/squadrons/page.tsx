@@ -43,9 +43,13 @@ export default async function SquadronsPage() {
   });
 
   // Fetch ALL profiles for the "Assign Pilots" view
-  let profilesQuery = supabase
+  // We use adminClient here to bypass RLS, so we can count planes of other pilots
+  const { createAdminClient } = await import('@/utils/supabase/admin');
+  const adminClient = createAdminClient();
+
+  let profilesQuery = adminClient
     .from('profiles')
-    .select('id, username, role, squadron_id, is_active')
+    .select('id, username, role, squadron_id, is_active, pilot_airplanes(*)')
     .order('created_at', { ascending: true });
 
   // Si no es SUPER_ADMIN, solo ve los activos
@@ -54,6 +58,12 @@ export default async function SquadronsPage() {
   }
 
   const { data: allProfilesData } = await profilesQuery;
+
+  // Fetch all airplanes for the modal
+  const { data: airplanes } = await supabase
+    .from('airplanes')
+    .select('*')
+    .order('name');
 
   return (
     <div>
@@ -67,7 +77,16 @@ export default async function SquadronsPage() {
 
       <SquadronsClient 
         squadrons={formattedSquadrons} 
-        allProfiles={allProfilesData || []} 
+        allProfiles={(allProfilesData || []).map(p => ({
+          id: p.id,
+          username: p.username,
+          role: p.role,
+          squadron_id: p.squadron_id,
+          is_active: p.is_active,
+          activePlanesCount: p.pilot_airplanes?.filter((pa: any) => pa.is_unlocked).length || 0,
+          pilotAirplanes: p.pilot_airplanes || []
+        }))} 
+        airplanes={airplanes || []}
         currentUserRole={profile?.role || 'STAFF'} 
       />
     </div>

@@ -197,3 +197,49 @@ export async function togglePilotStatus(profileId: string, isActive: boolean) {
   revalidatePath('/dashboard/squadrons')
   return { success: true }
 }
+export async function updatePilotRole(profileId: string, newRole: string) {
+  const supabase = await createClient()
+
+  // Verify permissions
+  const { data: { user } } = await supabase.auth.getUser()
+  if (!user) return { error: 'No autorizado' }
+
+  const { data: callerProfile } = await supabase
+    .from('profiles')
+    .select('role')
+    .eq('id', user.id)
+    .single()
+
+  if (callerProfile?.role !== 'SUPER_ADMIN' && callerProfile?.role !== 'ADMIN') {
+    return { error: 'No tienes permisos para cambiar rangos' }
+  }
+
+  // Validate allowed roles based on caller
+  if (callerProfile.role === 'ADMIN') {
+    if (newRole !== 'STAFF' && newRole !== 'PILOT') {
+      return { error: 'Como ADMIN, solo puedes asignar los roles STAFF o PILOT' }
+    }
+    
+    // Check target's current role
+    const { data: targetProfile } = await supabase
+      .from('profiles')
+      .select('role')
+      .eq('id', profileId)
+      .single()
+      
+    if (targetProfile?.role === 'SUPER_ADMIN' || targetProfile?.role === 'ADMIN') {
+      return { error: 'No puedes modificar el rol de un superior o igual' }
+    }
+  }
+
+  const adminClient = createAdminClient()
+  const { error } = await adminClient
+    .from('profiles')
+    .update({ role: newRole })
+    .eq('id', profileId)
+
+  if (error) return { error: error.message }
+  
+  revalidatePath('/dashboard/squadrons')
+  return { success: true }
+}

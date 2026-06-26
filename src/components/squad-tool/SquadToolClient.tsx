@@ -25,6 +25,16 @@ interface ResultadoTabla {
   seleccionado: boolean;
 }
 
+const getClassColor = (planeClass: string) => {
+  const c = planeClass.toLowerCase();
+  if (c.includes('light fighter')) return '#9252E1';
+  if (c.includes('medium fighter')) return '#CC7A31';
+  if (c.includes('heavy fighter')) return '#C24740';
+  if (c.includes('interceptor')) return '#2A8FCD';
+  if (c.includes('attack')) return '#29A292';
+  return 'var(--color-gaming-secondary)';
+};
+
 export function SquadToolClient() {
   const [urlGoogle, setUrlGoogle] = useState("");
   const [cargando, setCargando] = useState(false);
@@ -290,7 +300,8 @@ export function SquadToolClient() {
                      <button 
                        key={tipo}
                        onClick={() => setTiposSeleccionados(prev => active ? prev.filter(t => t !== tipo) : [...prev, tipo])}
-                       className={`px-4 py-2 rounded-full text-sm font-bold border transition-all ${active ? 'bg-[var(--color-gaming-accent)] border-[var(--color-gaming-accent)] text-black' : 'bg-transparent border-white/20 text-gray-400 hover:border-white/50'}`}
+                       className={`px-4 py-2 rounded-full text-sm font-bold border transition-all ${active ? 'text-white' : 'bg-transparent border-white/20 text-gray-400 hover:border-white/50'}`}
+                       style={active ? { backgroundColor: getClassColor(tipo), borderColor: getClassColor(tipo) } : {}}
                      >
                        {tipo}
                      </button>
@@ -355,7 +366,10 @@ export function SquadToolClient() {
                           <div className="w-full h-full bg-[#1a2235]"></div>
                         )}
                         <div className="absolute bottom-3 left-4 z-20">
-                          <div className="inline-block text-[10px] font-black uppercase tracking-wider text-[var(--color-gaming-accent)] bg-black px-2 py-0.5 rounded mb-1">
+                          <div 
+                            className="inline-block text-[10px] font-black uppercase tracking-wider bg-black px-2 py-0.5 rounded mb-1"
+                            style={{ color: getClassColor(item.tipo) }}
+                          >
                             {item.tipo}
                           </div>
                           <h3 className="text-xl font-black text-white leading-tight drop-shadow-md">{item.nombreCompleto}</h3>
@@ -416,7 +430,10 @@ export function SquadToolClient() {
                            </span>
                         </div>
                         
-                        <div className="absolute top-4 left-4 text-xs font-bold uppercase tracking-wider text-gray-300 bg-black/60 px-3 py-1 rounded backdrop-blur">
+                        <div 
+                          className="absolute top-4 left-4 text-xs font-bold uppercase tracking-wider bg-black/60 px-3 py-1 rounded backdrop-blur"
+                          style={{ color: getClassColor(item.tipo) }}
+                        >
                           {item.tipo}
                         </div>
 
