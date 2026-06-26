@@ -1,0 +1,51 @@
+-- 1. Agregar la columna sub_name a la tabla airplanes
+ALTER TABLE public.airplanes ADD COLUMN IF NOT EXISTS sub_name TEXT;
+
+-- 2. Limpiar la tabla por si se corre el script dos veces
+TRUNCATE TABLE public.airplanes CASCADE;
+
+-- 3. Insertar todos los aviones
+INSERT INTO public.airplanes (name, sub_name, class, image_url) VALUES
+('F3-R', 'RAFALE', 'Medium Fighter', '/assets/planes/icons/jet-rafale-b-icon-solid.png'),
+('TORNADO', 'ADV', 'Heavy Fighter', '/assets/planes/icons/jet-tornado-icon-solid.png'),
+('MIRAGE', '2000', 'Medium Fighter', '/assets/planes/icons/jet-mirage-2000-icon-solid.png'),
+('JAS39', 'GRIPEN', 'Light Fighter', '/assets/planes/icons/jet-jas39e-gripen-icon-solid.png'),
+('F-16', 'Fighting Falcon', 'Light Fighter', '/assets/planes/icons/jet-f16-icon-solid.png'),
+('MiG-19', 'Farmer', 'Light Fighter', '/assets/planes/icons/jet-mig19-icon-solid.png'),
+('FGR4', 'Typhoon', 'Medium Fighter', '/assets/planes/icons/jet-typhoon-icon-solid.png'),
+('F1', 'Mirage', 'Light Fighter', '/assets/planes/icons/jet-mirage-f1c-icon-solid.png'),
+('A-4', 'Skyhawk', 'Attack', '/assets/planes/icons/jet-a4-icon-solid.png'),
+('JA37', 'Viggen', 'Medium Fighter', '/assets/planes/icons/jet-ja37di-viggen-icon-solid.png'),
+('Su-47', 'Berkut', 'Heavy Fighter', '/assets/planes/icons/jet-su47-icon-solid.png'),
+('MiG-29', 'Fulcrum', 'Medium Fighter', '/assets/planes/icons/jet-mig29-icon-solid.png'),
+('Su-35', 'Super Flanker', 'Heavy Fighter', '/assets/planes/icons/jet-su35s-icon-solid.png'),
+('GR3', 'Jaguar', 'Attack', '/assets/planes/icons/jet-jaguar-icon-solid.png'),
+('Su-57', 'Felon', 'Heavy Fighter', '/assets/planes/icons/jet-su57-icon-solid.png'),
+('F-22', 'Raptor', 'Heavy Fighter', '/assets/planes/icons/jet-f22-icon-solid.png'),
+('F-5', 'Tiger', 'Light Fighter', '/assets/planes/icons/jet-f5-icon-solid.png'),
+('F-35', 'Lightning', 'Medium Fighter', '/assets/planes/icons/jet-f35c-icon-solid.png'),
+('J-20', 'Mighty Dragon', 'Interceptor', '/assets/planes/icons/jet-j20-icon-solid.png'),
+('F-111', 'Aardvark', 'Interceptor', '/assets/planes/icons/jet-f111-icon-solid.png'),
+('J-10', 'Firebird', 'Medium Fighter', '/assets/planes/icons/jet-j10-icon-solid.png'),
+('Jf-17', 'Thunder', 'Light Fighter', '/assets/planes/icons/jet-jf17-icon-solid.png'),
+('MiG-21', 'Fishbed', 'Light Fighter', '/assets/planes/icons/jet-mig21-icon-solid.png'),
+('A-10', 'Thunderbolt', 'Attack', '/assets/planes/icons/jet-a10-icon-solid.png'),
+('M.III', 'Mirage', 'Light Fighter', '/assets/planes/icons/jet-mirage-iii-icon-solid.png'),
+('MiG-23', 'Flogger', 'Light Fighter', '/assets/planes/icons/jet-mig23-icon-solid.png'),
+('Su-30', 'Strike Flanker', 'Heavy Fighter', '/assets/planes/icons/jet-su30-icon-solid.png'),
+('Su-34', 'Fullback', 'Attack', '/assets/planes/icons/jet-su34-icon-solid.png'),
+('Su-22', 'Fitter', 'Attack', '/assets/planes/icons/jet-su22-icon-solid.png'),
+('J35', 'Draken', 'Medium Fighter', '/assets/planes/icons/jet-saab35-draken-icon-solid.png'),
+('Su-33', 'Sea Flanker', 'Heavy Fighter', '/assets/planes/icons/jet-su33-icon-solid.png'),
+('F/A-18F', 'Super Hornet', 'Heavy Fighter', '/assets/planes/icons/jet-f18f-icon-solid.png'),
+('F/A-18', 'Hornet', 'Medium Fighter', '/assets/planes/icons/jet-f18c-icon-solid.png'),
+('F-15', 'Eagle', 'Heavy Fighter', '/assets/planes/icons/jet-f15c-icon-solid.png'),
+('Su-27', 'Flanker', 'Heavy Fighter', '/assets/planes/icons/jet-su27-icon-solid.png'),
+('F-4', 'Phantom', 'Heavy Fighter', '/assets/planes/icons/jet-f4-icon-solid.png'),
+('F-14', 'Tomcat', 'Interceptor', '/assets/planes/icons/jet-f14d-icon-solid.png'),
+('F-106', 'Delta Dart', 'Medium Fighter', '/assets/planes/icons/jet-f106a-icon-solid.png'),
+('MiG-31', 'Foxhound', 'Interceptor', '/assets/planes/icons/jet-mig31-icon-solid.png'),
+('A-6', 'Intruder', 'Attack', '/assets/planes/icons/jet-a6e-icon-solid.png'),
+('Su-25', 'Frogfoot', 'Attack', '/assets/planes/icons/jet-su25-icon-solid.png'),
+('F-100', 'Super Sabre', 'Medium Fighter', '/assets/planes/icons/jet-f100-icon-solid.png'),
+('KF-21', 'Boramae', 'Medium Fighter', '/assets/planes/icons/jet-kf21-icon-solid.png');

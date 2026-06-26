@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gaming-bg: #0b0f19;
+  --color-gaming-card: #151a2d;
+  --color-gaming-accent: #00e5ff;
+  --color-gaming-accent-hover: #00b8cc;
+  --color-gaming-secondary: #ff3366;
+  --color-gaming-text: #e2e8f0;
+  --color-gaming-muted: #64748b;
+  --font-gaming: var(--font-geist-sans);
+}
+
+:root {
+  --background: #0b0f19; /* Force dark mode for gaming feel */
+  --foreground: #e2e8f0;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-gaming);
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar for gaming feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b0f19;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #151a2d;
+  border-radius: 4px;
+  border: 1px solid #1e293b;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00e5ff;
+}
+
+.glass-panel {
+  background: rgba(21, 26, 45, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 229, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
