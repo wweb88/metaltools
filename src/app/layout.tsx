@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Rajdhani } from "next/font/google";
+import { GoogleAnalytics } from '@next/third-parties/google';
 import "./globals.css";
 
 const rajdhani = Rajdhani({
@@ -39,6 +40,7 @@ export default function RootLayout({
         <main className="flex-1 w-full relative z-0 flex flex-col">
           {children}
         </main>
+        {process.env.NEXT_PUBLIC_GA_ID && <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />}
       </body>
     </html>
   );

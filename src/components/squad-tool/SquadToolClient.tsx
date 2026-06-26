@@ -342,27 +342,29 @@ export function SquadToolClient() {
                     >
                       <button 
                         onClick={() => toggleSeleccion(item)} 
-                        className="absolute top-2 right-2 z-40 bg-red-500/80 hover:bg-red-500 text-white rounded-full p-1.5 transition-colors"
+                        className="absolute top-3 right-3 z-40 bg-red-500/90 hover:bg-red-500 text-white rounded-full p-2 transition-colors shadow-lg"
                         title="Remover"
                       >
                         <X className="w-4 h-4" />
                       </button>
                       
-                      <div className="w-full h-40 relative bg-gradient-to-b from-[#0b0f19]/50 to-transparent flex items-center justify-center p-4">
+                      <div className="w-full relative flex items-center justify-center min-h-[160px] bg-gradient-to-b from-[#0b0f19]/50 to-transparent">
                         {item.imagenBig ? (
                           <img src={item.imagenBig} alt={item.nombreCompleto} className="max-w-full max-h-full object-contain drop-shadow-2xl" />
                         ) : (
                           <div className="w-full h-full bg-[#1a2235]"></div>
                         )}
+                        <div className="absolute bottom-3 left-4 z-20">
+                          <div className="inline-block text-[10px] font-black uppercase tracking-wider text-[var(--color-gaming-accent)] bg-black px-2 py-0.5 rounded mb-1">
+                            {item.tipo}
+                          </div>
+                          <h3 className="text-xl font-black text-white leading-tight drop-shadow-md">{item.nombreCompleto}</h3>
+                        </div>
                       </div>
 
-                      <div className="relative z-20 p-4 space-y-1 flex-1 flex flex-col justify-end border-t border-white/5 bg-[#0b0f19]/30">
-                        <div className="inline-block self-start text-[10px] font-black uppercase tracking-wider text-[var(--color-gaming-accent)] bg-black/80 px-2 py-0.5 rounded backdrop-blur mb-1 border border-white/5">
-                          {item.tipo}
-                        </div>
-                        <p className="text-gray-400 font-bold text-xs uppercase tracking-wider truncate">{item.jugador}</p>
-                        <h3 className="text-lg font-black text-white leading-tight">{item.nombreCompleto}</h3>
-                        <div className="flex justify-between items-center pt-2 text-xs font-bold border-t border-white/10 mt-2">
+                      <div className="relative z-20 p-4 pt-3 flex-1 flex flex-col justify-end border-t border-white/5 bg-[#0b0f19]/30">
+                        <p className="text-gray-300 font-black text-lg uppercase tracking-wider truncate mb-3">{item.jugador}</p>
+                        <div className="flex justify-between items-center pt-3 text-[16px] font-bold border-t border-white/10">
                            <span className="text-blue-400">SP: {item.specialSkill}</span>
                            <span className="text-green-400">PA: {item.passiveAbility}</span>
                         </div>
