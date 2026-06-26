@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { login, signup } from './actions';
+import { login } from './actions';
 import { Shield, Mail, Lock, User, AlertCircle } from 'lucide-react';
 import { useSearchParams } from 'next/navigation';
 
