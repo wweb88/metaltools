@@ -2,6 +2,12 @@ import { createClient } from '@/utils/supabase/server';
 import { redirect } from 'next/navigation';
 import { SquadronsClient } from './SquadronsClient';
 import { Shield } from 'lucide-react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Gestión de Escuadrones - Metaltools",
+  description: "Administra los grupos y asigna a los miembros del escuadrón."
+};
 
 export default async function SquadronsPage() {
   const supabase = await createClient();

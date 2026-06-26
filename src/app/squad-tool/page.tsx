@@ -1,7 +1,7 @@
 import { SquadToolClient } from "@/components/squad-tool/SquadToolClient";
 
 export const metadata = {
-  title: "Squad Tool - Squad Metalstorm",
+  title: "Squad Tool - Metaltools",
   description: "Organiza tu escuadrón cruzando habilidades y niveles."
 };
 

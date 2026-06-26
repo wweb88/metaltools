@@ -1,7 +1,7 @@
 import { Shield, ShieldAlert, ShieldCheck, Scale, ArrowDownUp, AlertTriangle, Users, Megaphone, Star, CheckCircle2, BadgeAlert, Ban, Info, ShieldHalf } from "lucide-react";
 
 export const metadata = {
-  title: "Reglamentos y Sanciones - Squad Metalstorm",
+  title: "Reglamentos y Sanciones - Metaltools",
   description: "Normas vigentes que rigen el funcionamiento de las Brigadas Aéreas."
 };
 

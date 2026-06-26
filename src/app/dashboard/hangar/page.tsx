@@ -2,6 +2,12 @@ import { createClient } from '@/utils/supabase/server';
 import { redirect } from 'next/navigation';
 import { Plane } from 'lucide-react';
 import { HangarGrid } from '../HangarGrid';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Tu Hangar - Metaltools",
+  description: "Gestiona los niveles y habilidades de tus aviones."
+};
 
 export default async function HangarPage() {
   const supabase = await createClient();

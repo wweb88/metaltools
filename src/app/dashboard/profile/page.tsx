@@ -3,6 +3,12 @@ import { redirect } from 'next/navigation'
 import { ProfileForm } from './ProfileForm'
 import { Settings, User, ArrowLeft } from 'lucide-react'
 import Link from 'next/link'
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Mi Perfil - Metaltools",
+  description: "Configura tus datos de cuenta y contraseña."
+};
 
 export default async function ProfilePage() {
   const supabase = await createClient()

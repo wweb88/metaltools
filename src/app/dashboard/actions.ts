@@ -58,7 +58,12 @@ export async function togglePlane(airplaneId: string, isUnlocked: boolean, targe
   revalidatePath('/dashboard')
 }
 
-export async function updatePlaneLevel(airplaneId: string, field: 'level' | 'special_ability_level' | 'passive_ability_level', value: number, targetProfileId?: string) {
+export async function updatePlaneLevel(
+  airplaneId: string, 
+  field: 'level' | 'special_ability_level' | 'passive_ability_level' | 'mod1_name' | 'mod1_level' | 'mod2_name' | 'mod2_level', 
+  value: number | string | null, 
+  targetProfileId?: string
+) {
   const supabase = await createClient()
   const { data: { user } } = await supabase.auth.getUser()
 
@@ -85,9 +90,22 @@ export async function updatePlaneLevel(airplaneId: string, field: 'level' | 'spe
     profileIdToUpdate = targetProfileId;
   }
 
+  const updateData: any = { [field]: value };
+  
+  if (field === 'level' && typeof value === 'number') {
+    if (value < 20) {
+      updateData.mod2_name = null;
+      updateData.mod2_level = null;
+    }
+    if (value < 16) {
+      updateData.mod1_name = null;
+      updateData.mod1_level = null;
+    }
+  }
+
   const { error } = await dbClient
     .from('pilot_airplanes')
-    .update({ [field]: value })
+    .update(updateData)
     .eq('profile_id', profileIdToUpdate)
     .eq('airplane_id', airplaneId)
 

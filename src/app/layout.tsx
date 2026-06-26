@@ -10,13 +10,13 @@ const rajdhani = Rajdhani({
 });
 
 export const metadata: Metadata = {
-  title: "Squad Metalstorm - Tool",
-  description: "Herramienta de gestión de escuadrones y calculadoras para Metalstorm.",
+  title: "Metaltools",
+  description: "Herramienta de gestión de escuadrones y calculadoras para Metaltools.",
   openGraph: {
-    title: "Squad Metalstorm - Tool",
-    description: "Administra tu escuadrón, aviones y calcula recursos en Metalstorm.",
-    url: "https://metalstorm.app",
-    siteName: "Squad Metalstorm",
+    title: "Metaltools",
+    description: "Administra tu escuadrón, aviones y calcula recursos en Metaltools.",
+    url: "https://metaltools.app",
+    siteName: "Metaltools",
     type: "website",
   },
 };

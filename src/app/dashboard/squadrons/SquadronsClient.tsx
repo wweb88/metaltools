@@ -380,6 +380,7 @@ export function SquadronsClient({
             <table className="w-full text-left">
               <thead className="bg-white/5 text-gray-400 text-xs uppercase tracking-widest font-bold">
                 <tr>
+                  <th className="px-6 py-4 w-16 text-center">#</th>
                   <th className="px-6 py-4">Piloto (Username)</th>
                   <th className="px-6 py-4">Rango</th>
                   <th className="px-6 py-4">Aviones</th>
@@ -397,10 +398,11 @@ export function SquadronsClient({
                     if (!aActive && bActive) return 1;
                     return a.username.localeCompare(b.username);
                   })
-                  .map(profile => {
+                  .map((profile, index) => {
                   const isSuspended = profile.is_active === false;
                   return (
                     <tr key={profile.id} className={`hover:bg-white/5 transition-colors ${isSuspended ? 'bg-red-900/10 opacity-70' : ''}`}>
+                      <td className="px-6 py-4 text-center text-gray-500 font-black">{index + 1}</td>
                       <td className="px-6 py-4">
                         <div className="flex items-center gap-2">
                           <span className={`font-bold ${isSuspended ? 'text-red-400 line-through' : 'text-white'}`}>{profile.username}</span>
