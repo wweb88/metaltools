@@ -21,13 +21,13 @@ export function Navbar() {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 glass-panel border-b border-white/5 px-6 py-4">
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 group">
+    <nav className="sticky top-0 z-50 glass-panel border-b border-white/5 px-3 sm:px-6 py-3 md:py-4">
+      <div className="max-w-7xl mx-auto flex items-center justify-between gap-2">
+        <Link href="/" className="flex items-center gap-1.5 sm:gap-2 group min-w-0">
           <div className={`flex items-center justify-center transform group-hover:scale-110 transition-transform mix-blend-screen ${styles.logoContainer}`}>
             <img src="/assets/images/wrench_icon_only.png" alt="MetalTools Icon" className="h-full w-full object-contain" />
           </div>
-          <div className="flex items-center transform group-hover:translate-x-1 transition-transform py-2">
+          <div className={`items-center transform group-hover:translate-x-1 transition-transform py-2 ${styles.logoText}`}>
             <span className="text-2xl md:text-3xl font-black tracking-widest uppercase flex items-center">
               <span className="text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.6)]">METAL</span>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-gaming-accent)] to-[#00ff9d] drop-shadow-[0_0_12px_rgba(0,229,255,0.8)]">TOOLS</span>
@@ -87,7 +87,7 @@ export function Navbar() {
         </div>
 
         {/* Mobile Controls */}
-        <div className="flex md:hidden items-center gap-2">
+        <div className="flex md:hidden items-center gap-1.5 shrink-0">
           <div className="flex items-center gap-1 bg-black/40 border border-white/10 rounded-lg p-1">
             <button
               type="button"
