@@ -3,8 +3,11 @@ import { Hero3DWrapper } from "@/components/home/Hero3DWrapper";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight, Calculator, Crosshair } from "lucide-react";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export default function Home() {
+  const { t } = useLanguage();
+
   return (
     <div className="relative flex-1 flex flex-col justify-center items-center min-h-[calc(100vh-80px)] text-center p-6 overflow-hidden">
       <Hero3DWrapper />
@@ -20,8 +23,8 @@ export default function Home() {
         >
           <div className="absolute inset-0 bg-[var(--color-gaming-accent)] blur-[80px] opacity-20 rounded-full"></div>
           <motion.img 
-            src="/assets/images/logo-brigada.jpg" 
-            alt="Logo Brigada" 
+            src="/assets/images/logo.jpg" 
+            alt="Logo White" 
             className="w-48 h-48 md:w-64 md:h-64 object-cover rounded-full border-4 border-white/10 shadow-[0_0_40px_rgba(0,229,255,0.4)] relative z-10"
             animate={{ 
               y: [-15, 15, -15],
@@ -42,17 +45,15 @@ export default function Home() {
           transition={{ delay: 0.5, duration: 0.8 }}
           className="p-4 md:p-8 relative z-20"
         >
-          
-          
           <h1 className="text-4xl md:text-5xl font-black uppercase tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400 mb-6">
-            ¡Bienvenido, <span className="text-[var(--color-gaming-accent)]">Piloto!</span>
+            {t.home.welcomePrefix}{" "}
+            <span className="text-[var(--color-gaming-accent)]">{t.home.welcomeHighlight}</span>
           </h1>
           
           <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto mb-10">
-            Aquí tienes el equipo de soporte que necesitas antes de despegar. Explora nuestra suite de herramientas diseñadas para darte la ventaja competitiva en combate. Selecciona una opción a continuación para empezar y mantente atento: <strong className="text-white">¡nuestra base de ingeniería está preparando nuevas funciones para tu próxima misión!</strong>
+            {t.home.description}{" "}
+            <strong className="text-white">{t.home.descriptionStrong}</strong>
           </p>
-          
-          
         </motion.div>
       </div>
     </div>

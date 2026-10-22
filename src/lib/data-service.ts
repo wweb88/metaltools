@@ -18,6 +18,7 @@ export interface PlaneInfo {
   type: string;
   image: string;
   imageBig: string;
+  tacticalImages?: string[];
 }
 
 export interface TypeInfo {
@@ -34,11 +35,11 @@ export const TIPOS_AVIONES = [
 ];
 
 export const TIPOS_INFO: TypeInfo[] = [
-  { name: 'Light Fighter', image: 'https://starform-playmetalstorm-assets.s3.us-west-2.amazonaws.com/role-icons/role-light-fighter-bg.png' },
-  { name: 'Medium Fighter', image: 'https://starform-playmetalstorm-assets.s3.us-west-2.amazonaws.com/role-icons/role-medium-fighter-bg.png' },
-  { name: 'Heavy Fighter', image: 'https://starform-playmetalstorm-assets.s3.us-west-2.amazonaws.com/role-icons/role-heavy-fighter-bg.png' },
-  { name: 'Interceptor', image: 'https://starform-playmetalstorm-assets.s3.us-west-2.amazonaws.com/role-icons/role-interceptor-bg.png' },
-  { name: 'Attack', image: 'https://starform-playmetalstorm-assets.s3.us-west-2.amazonaws.com/role-icons/role-attack-bg.png' }
+  { name: 'Light Fighter', image: '/assets/planes/roles/role-light-fighter-bg.png' },
+  { name: 'Medium Fighter', image: '/assets/planes/roles/role-medium-fighter-bg.png' },
+  { name: 'Heavy Fighter', image: '/assets/planes/roles/role-heavy-fighter-bg.png' },
+  { name: 'Interceptor', image: '/assets/planes/roles/role-interceptor-bg.png' },
+  { name: 'Attack', image: '/assets/planes/roles/role-attack-bg.png' }
 ];
 
 export async function fetchPlanesInfo(): Promise<PlaneInfo[]> {

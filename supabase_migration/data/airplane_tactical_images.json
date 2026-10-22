@@ -1,0 +1,182 @@
+[
+  {
+    "id": "908fbba6-e5d4-4f72-b78c-43be40403c0c",
+    "airplane_id": "ff805203-9890-45a9-970d-832f06800bc9",
+    "uploader_id": "10a5d563-387b-4b40-8c2c-9aee333a64f8",
+    "image_url": "https://hitlkbcbruqgxrmaoszf.supabase.co/storage/v1/object/public/tactical-images/ff805203-9890-45a9-970d-832f06800bc9/1783020925038.jpg",
+    "game_modes": [
+      "Objetivo prioritario",
+      "Superioridad Aérea"
+    ],
+    "created_at": "2026-07-02T19:35:25.706263+00:00",
+    "comment": "Upgrade enfocado para modos Superioridad Aérea y Objetivo prioritario, el cambio lo tiene en la aviónica, donde se le sube el alcance de detección y se le baja al alcance de radar."
+  },
+  {
+    "id": "b8fe804c-2ba4-4f9e-8c9a-f2b8984c2a65",
+    "airplane_id": "ff805203-9890-45a9-970d-832f06800bc9",
+    "uploader_id": "10a5d563-387b-4b40-8c2c-9aee333a64f8",
+    "image_url": "https://hitlkbcbruqgxrmaoszf.supabase.co/storage/v1/object/public/tactical-images/ff805203-9890-45a9-970d-832f06800bc9/1783021280452.jpg",
+    "game_modes": [
+      "Combate a muerte por equipos"
+    ],
+    "created_at": "2026-07-02T19:41:20.965206+00:00",
+    "comment": "Upgrade enfocado para Combate a muerte por equipos ya que se le sube el porcentaje de alcance de radar y cono de radar, bajandole el alcance de deteccion propio del avion."
+  },
+  {
+    "id": "3cdb7821-f055-4453-901a-4021f6664991",
+    "airplane_id": "14912764-e6c4-4a43-a899-fd38fc5ec5f2",
+    "uploader_id": "c5385b4a-dd58-4651-bd0d-b2b117b0ffe8",
+    "image_url": "https://hitlkbcbruqgxrmaoszf.supabase.co/storage/v1/object/public/tactical-images/14912764-e6c4-4a43-a899-fd38fc5ec5f2/1783022084543.jpg",
+    "game_modes": [
+      "Objetivo prioritario",
+      "Combate a muerte por equipos"
+    ],
+    "created_at": "2026-07-02T19:54:45.31456+00:00",
+    "comment": "Dependiendo el mapa sera mas o menos util"
+  },
+  {
+    "id": "58cbab03-0afa-4890-9582-9eb648b48946",
+    "airplane_id": "7e1a9abb-849e-4b23-8b72-6c4ffeb2122c",
+    "uploader_id": "c5385b4a-dd58-4651-bd0d-b2b117b0ffe8",
+    "image_url": "https://hitlkbcbruqgxrmaoszf.supabase.co/storage/v1/object/public/tactical-images/7e1a9abb-849e-4b23-8b72-6c4ffeb2122c/1783105541661.jpg",
+    "game_modes": [
+      "Objetivo prioritario",
+      "Superioridad Aérea",
+      "Combate a muerte por equipos"
+    ],
+    "created_at": "2026-07-03T19:05:42.629496+00:00",
+    "comment": null
+  },
+  {
+    "id": "b3b9c91f-f03e-4084-816f-33f326c520e8",
+    "airplane_id": "c02bb980-1595-4cd4-b961-232cbf6d583d",
+    "uploader_id": "c5385b4a-dd58-4651-bd0d-b2b117b0ffe8",
+    "image_url": "https://hitlkbcbruqgxrmaoszf.supabase.co/storage/v1/object/public/tactical-images/c02bb980-1595-4cd4-b961-232cbf6d583d/1783108806107.jpg",
+    "game_modes": [
+      "Combate a muerte por equipos"
+    ],
+    "created_at": "2026-07-03T20:00:06.957494+00:00",
+    "comment": null
+  },
+  {
+    "id": "738179ef-8089-486b-ace5-2ad6f32d510e",
+    "airplane_id": "5250018e-226b-49b4-98b6-27cbdb8fc44d",
+    "uploader_id": "c5385b4a-dd58-4651-bd0d-b2b117b0ffe8",
+    "image_url": "https://hitlkbcbruqgxrmaoszf.supabase.co/storage/v1/object/public/tactical-images/5250018e-226b-49b4-98b6-27cbdb8fc44d/1783109265855.jpg",
+    "game_modes": [
+      "Objetivo prioritario",
+      "Combate a muerte por equipos"
+    ],
+    "created_at": "2026-07-03T20:07:46.885902+00:00",
+    "comment": null
+  },
+  {
+    "id": "cbba453c-da05-4a7e-a218-5a47fc462e19",
+    "airplane_id": "9faf6a38-f4c5-4dea-a5d3-eef6a155fe69",
+    "uploader_id": "c5385b4a-dd58-4651-bd0d-b2b117b0ffe8",
+    "image_url": "https://hitlkbcbruqgxrmaoszf.supabase.co/storage/v1/object/public/tactical-images/9faf6a38-f4c5-4dea-a5d3-eef6a155fe69/1783109488171.jpg",
+    "game_modes": [
+      "Objetivo prioritario",
+      "Superioridad Aérea",
+      "Combate a muerte por equipos"
+    ],
+    "created_at": "2026-07-03T20:11:28.78465+00:00",
+    "comment": "Para objetivo priritario y superioridad aerea cambio guiado mejorado, por maxima propulsion "
+  },
+  {
+    "id": "c49d9572-430d-4d67-beaf-287e0c715a61",
+    "airplane_id": "f5d6a7c9-352c-4bea-af5e-173e16106c10",
+    "uploader_id": "5316d792-a352-41bc-82fe-90828360ad5b",
+    "image_url": "https://hitlkbcbruqgxrmaoszf.supabase.co/storage/v1/object/public/tactical-images/f5d6a7c9-352c-4bea-af5e-173e16106c10/1783787731182.png",
+    "game_modes": [
+      "Objetivo prioritario",
+      "Combate a muerte por equipos"
+    ],
+    "created_at": "2026-07-11T16:35:32.317111+00:00",
+    "comment": null
+  },
+  {
+    "id": "55d51c02-c99a-4a1c-be83-8e6e02ff2850",
+    "airplane_id": "75e18772-c57e-42d2-b2b9-a27a68f9ecba",
+    "uploader_id": "5316d792-a352-41bc-82fe-90828360ad5b",
+    "image_url": "https://hitlkbcbruqgxrmaoszf.supabase.co/storage/v1/object/public/tactical-images/75e18772-c57e-42d2-b2b9-a27a68f9ecba/1783788867942.png",
+    "game_modes": [
+      "Objetivo prioritario",
+      "Superioridad Aérea",
+      "Combate a muerte por equipos"
+    ],
+    "created_at": "2026-07-11T16:54:28.921181+00:00",
+    "comment": null
+  },
+  {
+    "id": "b2a1fce4-d8d4-441f-bdd6-6cbeeba36830",
+    "airplane_id": "24394d1b-cc6e-4a49-8313-036d0931c31c",
+    "uploader_id": "5316d792-a352-41bc-82fe-90828360ad5b",
+    "image_url": "https://hitlkbcbruqgxrmaoszf.supabase.co/storage/v1/object/public/tactical-images/24394d1b-cc6e-4a49-8313-036d0931c31c/1783789138055.png",
+    "game_modes": [
+      "Combate a muerte por equipos"
+    ],
+    "created_at": "2026-07-11T16:58:58.880078+00:00",
+    "comment": null
+  },
+  {
+    "id": "6d960421-f642-47f5-aaad-1ccad1c2eda9",
+    "airplane_id": "da9c2fc5-dc13-47d5-8d92-4aa386aaf70b",
+    "uploader_id": "51eef923-3836-4c69-a39f-18933c32ae7e",
+    "image_url": "https://hitlkbcbruqgxrmaoszf.supabase.co/storage/v1/object/public/tactical-images/da9c2fc5-dc13-47d5-8d92-4aa386aaf70b/1783823296399.jpeg",
+    "game_modes": [
+      "Superioridad Aérea",
+      "Combate a muerte por equipos"
+    ],
+    "created_at": "2026-07-12T02:28:17.222791+00:00",
+    "comment": null
+  },
+  {
+    "id": "66c6c2f1-8172-4772-bf4d-af508b7b1833",
+    "airplane_id": "9ab4fa35-050a-4aae-9418-d1fb5dac3aad",
+    "uploader_id": "51eef923-3836-4c69-a39f-18933c32ae7e",
+    "image_url": "https://hitlkbcbruqgxrmaoszf.supabase.co/storage/v1/object/public/tactical-images/9ab4fa35-050a-4aae-9418-d1fb5dac3aad/1783978142772.jpg",
+    "game_modes": [
+      "Combate a muerte por equipos"
+    ],
+    "created_at": "2026-07-13T21:29:03.731414+00:00",
+    "comment": null
+  },
+  {
+    "id": "07c308d0-02b4-4979-8580-71163c807e4b",
+    "airplane_id": "80db321d-ddf7-4152-9308-cd79e6ac4867",
+    "uploader_id": "c5385b4a-dd58-4651-bd0d-b2b117b0ffe8",
+    "image_url": "https://hitlkbcbruqgxrmaoszf.supabase.co/storage/v1/object/public/tactical-images/80db321d-ddf7-4152-9308-cd79e6ac4867/1784059483100.jpg",
+    "game_modes": [
+      "Objetivo prioritario",
+      "Combate a muerte por equipos"
+    ],
+    "created_at": "2026-07-14T20:04:44.156331+00:00",
+    "comment": null
+  },
+  {
+    "id": "77a260ad-2748-4964-ad9f-ebb66da499c2",
+    "airplane_id": "91d2baee-ef84-4b7b-8d2f-696e081268cb",
+    "uploader_id": "c5385b4a-dd58-4651-bd0d-b2b117b0ffe8",
+    "image_url": "https://hitlkbcbruqgxrmaoszf.supabase.co/storage/v1/object/public/tactical-images/91d2baee-ef84-4b7b-8d2f-696e081268cb/1784059575416.jpg",
+    "game_modes": [
+      "Superioridad Aérea",
+      "Combate a muerte por equipos"
+    ],
+    "created_at": "2026-07-14T20:06:16.363329+00:00",
+    "comment": null
+  },
+  {
+    "id": "00c3aa5e-87c3-45ab-a9ff-7953b4026719",
+    "airplane_id": "8f0bb198-117d-4e5c-bf98-af1e13c16b62",
+    "uploader_id": "c5385b4a-dd58-4651-bd0d-b2b117b0ffe8",
+    "image_url": "https://hitlkbcbruqgxrmaoszf.supabase.co/storage/v1/object/public/tactical-images/8f0bb198-117d-4e5c-bf98-af1e13c16b62/1784059923722.jpg",
+    "game_modes": [
+      "Objetivo prioritario",
+      "Superioridad Aérea",
+      "Combate a muerte por equipos"
+    ],
+    "created_at": "2026-07-14T20:12:04.635365+00:00",
+    "comment": null
+  }
+]

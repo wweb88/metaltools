@@ -3,19 +3,21 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { Crosshair, Calculator, ScrollText, Home, Menu, X, User } from "lucide-react";
+import { Crosshair, Calculator, ScrollText, Home, Menu, X, User, Globe } from "lucide-react";
+import { useLanguage } from "@/i18n/LanguageContext";
 import styles from "./Navbar.module.scss";
 
 export function Navbar() {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
   
   const navItems = [
-    { name: "Home", path: "/", icon: Home },
-    { name: "Squad Tool", path: "/squad-tool", icon: Crosshair },
-    { name: "Calculadora por Nivel", path: "/level-calculator", icon: Calculator },
-    { name: "Reglamentos", path: "/reglamentos", icon: ScrollText },
-    { name: "Hangar", path: "/dashboard", icon: User },
+    { name: t.nav.home, path: "/", icon: Home },
+    // { name: t.nav.squadTool, path: "/squad-tool", icon: Crosshair },
+    { name: t.nav.levelCalculator, path: "/level-calculator", icon: Calculator },
+    // { name: t.nav.rules, path: "/reglamentos", icon: ScrollText },
+    { name: t.nav.hangar, path: "/hangar", icon: User },
   ];
 
   return (
@@ -53,14 +55,73 @@ export function Navbar() {
               </Link>
             );
           })}
+
+          {/* Language Switcher */}
+          <div className="flex items-center gap-1 bg-black/40 border border-white/10 rounded-lg p-1">
+            <Globe className="w-4 h-4 text-gray-400 ml-1.5 mr-0.5" />
+            <button
+              type="button"
+              onClick={() => setLanguage("es")}
+              className={cn(
+                "px-2 py-1 rounded text-xs font-black uppercase tracking-wider transition-all cursor-pointer",
+                language === "es"
+                  ? "bg-[var(--color-gaming-accent)] text-black shadow-[0_0_10px_rgba(0,229,255,0.5)]"
+                  : "text-gray-400 hover:text-white"
+              )}
+            >
+              ES
+            </button>
+            <button
+              type="button"
+              onClick={() => setLanguage("en")}
+              className={cn(
+                "px-2 py-1 rounded text-xs font-black uppercase tracking-wider transition-all cursor-pointer",
+                language === "en"
+                  ? "bg-[var(--color-gaming-accent)] text-black shadow-[0_0_10px_rgba(0,229,255,0.5)]"
+                  : "text-gray-400 hover:text-white"
+              )}
+            >
+              EN
+            </button>
+          </div>
         </div>
-        {/* Mobile Menu Toggle Button */}
-        <button 
-          className="md:hidden p-2 text-gray-400 hover:text-white transition-colors"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
+
+        {/* Mobile Controls */}
+        <div className="flex md:hidden items-center gap-2">
+          <div className="flex items-center gap-1 bg-black/40 border border-white/10 rounded-lg p-1">
+            <button
+              type="button"
+              onClick={() => setLanguage("es")}
+              className={cn(
+                "px-2 py-1 rounded text-xs font-black uppercase tracking-wider transition-all",
+                language === "es"
+                  ? "bg-[var(--color-gaming-accent)] text-black"
+                  : "text-gray-400 hover:text-white"
+              )}
+            >
+              ES
+            </button>
+            <button
+              type="button"
+              onClick={() => setLanguage("en")}
+              className={cn(
+                "px-2 py-1 rounded text-xs font-black uppercase tracking-wider transition-all",
+                language === "en"
+                  ? "bg-[var(--color-gaming-accent)] text-black"
+                  : "text-gray-400 hover:text-white"
+              )}
+            >
+              EN
+            </button>
+          </div>
+
+          <button 
+            className="p-2 text-gray-400 hover:text-white transition-colors"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu Dropdown */}

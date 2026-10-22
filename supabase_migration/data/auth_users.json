@@ -1,0 +1,1344 @@
+[
+  {
+    "id": "32f4b96d-4c3a-4960-8f0f-5bbd71e9c9e0",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "ahumada.kine@gmail.com",
+    "email_confirmed_at": "2026-07-31T05:14:59.949444Z",
+    "phone": "",
+    "confirmed_at": "2026-07-31T05:14:59.949444Z",
+    "last_sign_in_at": "2026-07-31T05:28:34.401653Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-07-31T05:14:59.916221Z",
+    "updated_at": "2026-07-31T05:28:34.416046Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "89fd5a85-a62b-42c6-8749-2fd973940076",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "maurico_20@hotmail.com",
+    "email_confirmed_at": "2026-07-31T04:09:31.768135Z",
+    "phone": "",
+    "confirmed_at": "2026-07-31T04:09:31.768135Z",
+    "last_sign_in_at": "2026-07-31T04:18:13.12604Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-07-31T04:09:31.737132Z",
+    "updated_at": "2026-08-31T14:49:07.288975Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "6aafdc6a-a544-41b3-8888-bb4728bd2052",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "igna_bro@hotmail.com",
+    "email_confirmed_at": "2026-07-31T03:59:52.420124Z",
+    "phone": "",
+    "confirmed_at": "2026-07-31T03:59:52.420124Z",
+    "last_sign_in_at": "2026-07-31T04:04:37.808059Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-07-31T03:59:52.379469Z",
+    "updated_at": "2026-07-31T04:04:37.819936Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "51779b9f-e428-4f4b-9d45-fc94e16a851a",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "caleb_coca@hotmail.com",
+    "email_confirmed_at": "2026-07-25T00:52:22.601316Z",
+    "phone": "",
+    "confirmed_at": "2026-07-25T00:52:22.601316Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-07-25T00:52:22.597342Z",
+    "updated_at": "2026-07-25T00:52:22.602021Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "f82a2373-6efb-4cd6-9b22-223307b1dc01",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "jpcrico@hotmail.com",
+    "email_confirmed_at": "2026-07-25T00:51:54.457621Z",
+    "phone": "",
+    "confirmed_at": "2026-07-25T00:51:54.457621Z",
+    "last_sign_in_at": "2026-07-27T16:37:18.859533Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-07-25T00:51:54.451362Z",
+    "updated_at": "2026-07-29T18:57:14.738584Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "d71e9ae4-eb27-4365-8364-2bc307626e5e",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "osbeto.m@gmail.com",
+    "email_confirmed_at": "2026-07-25T00:51:39.342588Z",
+    "phone": "",
+    "confirmed_at": "2026-07-25T00:51:39.342588Z",
+    "last_sign_in_at": "2026-08-13T03:22:01.496378Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-07-25T00:51:39.267877Z",
+    "updated_at": "2026-08-16T01:58:05.02154Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "6bbb5fb6-b9ce-48fd-b269-984dc28c1933",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "fvargas.labor@gmail.com",
+    "email_confirmed_at": "2026-07-07T18:52:17.275186Z",
+    "phone": "",
+    "confirmed_at": "2026-07-07T18:52:17.275186Z",
+    "last_sign_in_at": "2026-07-14T03:57:36.018289Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-07-07T18:52:17.226644Z",
+    "updated_at": "2026-09-07T20:22:46.750431Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "c55e19b1-d58c-4d75-8d19-2c2c02bc8171",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "gabolsi75@gmail.com",
+    "email_confirmed_at": "2026-06-26T18:48:10.613271Z",
+    "phone": "",
+    "confirmed_at": "2026-06-26T18:48:10.613271Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-06-26T18:48:10.61038Z",
+    "updated_at": "2026-06-26T18:48:10.615458Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "7e896ac1-35de-439e-b2e8-477cc1329ca5",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "cuenta1989mu@gmail.com",
+    "email_confirmed_at": "2026-06-26T18:47:44.918617Z",
+    "phone": "",
+    "confirmed_at": "2026-06-26T18:47:44.918617Z",
+    "recovery_sent_at": "2026-07-05T17:02:37.598034Z",
+    "last_sign_in_at": "2026-07-05T17:04:52.75929Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-06-26T18:47:44.898193Z",
+    "updated_at": "2026-07-12T14:06:13.244439Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "efd59891-7430-47df-a2c0-c0b911880fd6",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "guerrapbenjamin@gmail.com",
+    "email_confirmed_at": "2026-06-26T18:46:43.447142Z",
+    "phone": "",
+    "confirmed_at": "2026-06-26T18:46:43.447142Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-06-26T18:46:43.423647Z",
+    "updated_at": "2026-06-26T18:46:43.448017Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "eda8c37a-436c-4cd2-8efd-dc010287a093",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "antarez3000@gmail.com",
+    "email_confirmed_at": "2026-06-26T16:13:32.692716Z",
+    "phone": "",
+    "confirmed_at": "2026-06-26T16:13:32.692716Z",
+    "last_sign_in_at": "2026-07-07T04:26:10.764729Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-06-26T16:13:32.686997Z",
+    "updated_at": "2026-07-20T15:00:17.477317Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "e43200fc-c749-4887-a0d9-3bbaf221f21e",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "panxitowo9579@gmail.com",
+    "email_confirmed_at": "2026-06-26T16:13:11.935373Z",
+    "phone": "",
+    "confirmed_at": "2026-06-26T16:13:11.935373Z",
+    "last_sign_in_at": "2026-07-02T16:54:20.812027Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-06-26T16:13:11.917649Z",
+    "updated_at": "2026-07-04T07:32:47.765112Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "f27b5cc2-207f-49c3-8838-4be0b33a13cc",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "gan_gandrew@hotmail.com",
+    "email_confirmed_at": "2026-06-26T16:12:58.015738Z",
+    "phone": "",
+    "confirmed_at": "2026-06-26T16:12:58.015738Z",
+    "last_sign_in_at": "2026-07-16T04:08:45.401082Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-06-26T16:12:57.980997Z",
+    "updated_at": "2026-07-18T15:43:50.710995Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "e7aa8784-e775-4b54-9caf-cd39925f4256",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "carlospaillacan@icloud.com",
+    "email_confirmed_at": "2026-06-26T15:59:17.852173Z",
+    "phone": "",
+    "confirmed_at": "2026-06-26T15:59:17.852173Z",
+    "last_sign_in_at": "2026-07-03T03:24:06.445569Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-06-26T15:59:17.823773Z",
+    "updated_at": "2026-08-16T04:24:38.788739Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "3aea460d-5d02-476d-93ed-bc355509146d",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "guillermo.frickr@gmail.com",
+    "email_confirmed_at": "2026-06-26T15:53:15.99572Z",
+    "phone": "",
+    "confirmed_at": "2026-06-26T15:53:15.99572Z",
+    "recovery_sent_at": "2026-07-19T06:12:26.060876Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-06-26T15:53:15.977405Z",
+    "updated_at": "2026-07-19T06:12:45.707656Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "ded8291c-5150-4476-9688-25c80541591c",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "aquelme@gmail.com",
+    "email_confirmed_at": "2026-06-26T15:40:40.249095Z",
+    "phone": "",
+    "confirmed_at": "2026-06-26T15:40:40.249095Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-06-26T15:40:40.18243Z",
+    "updated_at": "2026-06-26T15:40:40.250176Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "a4cff72b-0b33-4ab6-867c-b63a76025e58",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "luis.salinas.h@gmail.com",
+    "email_confirmed_at": "2026-06-26T15:26:03.064198Z",
+    "phone": "",
+    "confirmed_at": "2026-06-26T15:26:03.064198Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-06-26T15:26:03.022336Z",
+    "updated_at": "2026-06-26T15:26:03.065119Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "e25e382f-ed16-4567-af47-8a3011391adf",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "rcubillosperez@gmail.com",
+    "email_confirmed_at": "2026-06-26T15:07:59.084036Z",
+    "phone": "",
+    "confirmed_at": "2026-06-26T15:07:59.084036Z",
+    "last_sign_in_at": "2026-07-02T15:34:25.692474Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-06-26T15:07:59.063703Z",
+    "updated_at": "2026-08-12T21:31:10.933661Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "badda04f-ab6e-47a8-abcf-8f4535d6959e",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "enzo.gianoni@gmail.com",
+    "email_confirmed_at": "2026-06-26T15:04:55.118704Z",
+    "phone": "",
+    "confirmed_at": "2026-06-26T15:04:55.118704Z",
+    "last_sign_in_at": "2026-07-03T19:20:55.217545Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-06-26T15:04:55.087353Z",
+    "updated_at": "2026-07-03T19:20:55.237633Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "dde93c49-1b8d-4041-a782-308ec54d55ea",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "rramirezt@gmail.com",
+    "email_confirmed_at": "2026-06-26T14:01:12.825024Z",
+    "phone": "",
+    "confirmed_at": "2026-06-26T14:01:12.825024Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-06-26T14:01:12.795908Z",
+    "updated_at": "2026-06-26T14:01:12.826671Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "3cc24310-eb91-488f-bdf5-10be7ae6ed75",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "pablo.inostroza.vera@gmail.com",
+    "email_confirmed_at": "2026-06-26T13:56:50.807872Z",
+    "phone": "",
+    "confirmed_at": "2026-06-26T13:56:50.807872Z",
+    "last_sign_in_at": "2026-07-07T15:18:21.723435Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-06-26T13:56:50.790973Z",
+    "updated_at": "2026-08-03T14:47:11.626974Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "765485b2-63ed-49d5-abe0-2f610c28f7e4",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "cristianovalleacuna@gmail.com",
+    "email_confirmed_at": "2026-06-26T13:53:16.441529Z",
+    "phone": "",
+    "confirmed_at": "2026-06-26T13:53:16.441529Z",
+    "last_sign_in_at": "2026-07-07T14:55:56.991839Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-06-26T13:53:16.408816Z",
+    "updated_at": "2026-07-07T16:42:34.650522Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "891f0cd1-1605-46cc-a0ba-1e1b79feceb3",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "zurdomagico@gmail.com",
+    "email_confirmed_at": "2026-06-26T13:51:58.615728Z",
+    "phone": "",
+    "confirmed_at": "2026-06-26T13:51:58.615728Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-06-26T13:51:58.555426Z",
+    "updated_at": "2026-06-26T13:51:58.618623Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "fba91541-5e84-4a92-9cc8-bd4b7c052f32",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "camilo.landaeta023@gmail.com",
+    "email_confirmed_at": "2026-06-26T13:44:41.489318Z",
+    "phone": "",
+    "confirmed_at": "2026-06-26T13:44:41.489318Z",
+    "last_sign_in_at": "2026-07-07T15:31:46.178578Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-06-26T13:44:41.469468Z",
+    "updated_at": "2026-07-07T18:39:09.671268Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "69e778ef-ff49-41fc-a959-4e2748d28bda",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "jose-araya@live.cl",
+    "email_confirmed_at": "2026-06-26T13:43:58.217439Z",
+    "phone": "",
+    "confirmed_at": "2026-06-26T13:43:58.217439Z",
+    "last_sign_in_at": "2026-07-08T18:18:58.243305Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-06-26T13:43:58.212522Z",
+    "updated_at": "2026-08-07T00:23:12.611328Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "ee204766-bdc3-4a91-ba37-e007784c88ab",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "vidalparedes.jaime@gmail.com",
+    "email_confirmed_at": "2026-06-26T13:43:29.499639Z",
+    "phone": "",
+    "confirmed_at": "2026-06-26T13:43:29.499639Z",
+    "last_sign_in_at": "2026-07-02T18:09:21.217973Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-06-26T13:43:29.48835Z",
+    "updated_at": "2026-07-08T05:06:14.009754Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "72e89153-4ba9-4d22-8cff-89d74183b66f",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "rquincha@gmail.com",
+    "email_confirmed_at": "2026-06-26T13:42:02.977327Z",
+    "phone": "",
+    "confirmed_at": "2026-06-26T13:42:02.977327Z",
+    "last_sign_in_at": "2026-07-19T22:34:58.082913Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-06-26T13:42:02.947218Z",
+    "updated_at": "2026-07-28T15:41:57.593006Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "828f7794-d884-449d-af47-242b11acbb80",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "claudiooki57@gmail.com",
+    "email_confirmed_at": "2026-06-26T13:38:34.539935Z",
+    "phone": "",
+    "confirmed_at": "2026-06-26T13:38:34.539935Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-06-26T13:38:34.515041Z",
+    "updated_at": "2026-06-26T13:38:34.541502Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "6d9317f5-96d5-4a9e-99ad-cc52bf96537d",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "ffuentealba@gmail.com",
+    "email_confirmed_at": "2026-06-26T13:34:45.23107Z",
+    "phone": "",
+    "confirmed_at": "2026-06-26T13:34:45.23107Z",
+    "recovery_sent_at": "2026-07-05T19:24:05.011001Z",
+    "last_sign_in_at": "2026-08-16T22:10:09.973505Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-06-26T13:34:45.189302Z",
+    "updated_at": "2026-08-18T15:49:33.96289Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "ff4be0d1-5928-44e4-b407-5af97a7e9564",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "jorgeluisvillanuevavera8@gmail.com",
+    "email_confirmed_at": "2026-06-26T03:00:12.747443Z",
+    "phone": "",
+    "confirmed_at": "2026-06-26T03:00:12.747443Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-06-26T03:00:12.724539Z",
+    "updated_at": "2026-06-26T03:00:12.752189Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "96cd9bfb-513e-47de-a544-e7ee54a46258",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "msandovh13@gmail.com",
+    "email_confirmed_at": "2026-06-26T02:58:11.590114Z",
+    "phone": "",
+    "confirmed_at": "2026-06-26T02:58:11.590114Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-06-26T02:58:11.584756Z",
+    "updated_at": "2026-06-26T02:58:11.591018Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "46d757f8-b860-47e4-91fa-0c88717926e8",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "jorge.ignacio.os19@gmail.com",
+    "email_confirmed_at": "2026-06-26T02:57:50.446958Z",
+    "phone": "",
+    "confirmed_at": "2026-06-26T02:57:50.446958Z",
+    "last_sign_in_at": "2026-07-02T19:24:33.312894Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-06-26T02:57:50.39364Z",
+    "updated_at": "2026-09-03T01:35:07.059099Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "dc533f85-e5ac-4632-bb68-4bae77223e80",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "patriciomerinoa@gmail.com",
+    "email_confirmed_at": "2026-06-26T02:18:44.45437Z",
+    "phone": "",
+    "confirmed_at": "2026-06-26T02:18:44.45437Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-06-26T02:18:44.436048Z",
+    "updated_at": "2026-06-26T02:18:44.455272Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "59e52207-1690-4c9f-af9d-4d1c107c53d2",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "camilol.velasquez@gmail.com",
+    "email_confirmed_at": "2026-06-26T02:14:32.910687Z",
+    "phone": "",
+    "confirmed_at": "2026-06-26T02:14:32.910687Z",
+    "last_sign_in_at": "2026-07-02T14:53:41.928964Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-06-26T02:14:32.907492Z",
+    "updated_at": "2026-07-15T02:09:00.687954Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "e0f2b733-0d07-488e-8734-1c67d6eefc08",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "atearef@gmail.com",
+    "email_confirmed_at": "2026-06-26T02:14:02.594195Z",
+    "phone": "",
+    "confirmed_at": "2026-06-26T02:14:02.594195Z",
+    "last_sign_in_at": "2026-07-03T04:24:26.530767Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-06-26T02:14:02.551755Z",
+    "updated_at": "2026-08-04T04:34:37.813406Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "9cdb6e81-38e0-42c4-9c6f-71308af5686a",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "maflotdh@gmail.com",
+    "email_confirmed_at": "2026-06-26T02:13:28.66892Z",
+    "phone": "",
+    "confirmed_at": "2026-06-26T02:13:28.66892Z",
+    "last_sign_in_at": "2026-07-20T14:55:03.563983Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-06-26T02:13:28.664435Z",
+    "updated_at": "2026-07-20T17:10:48.175422Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "bff6676b-4d70-48ce-8612-cc89b5a9b27b",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "cristobal.arevalo07@gmail.com",
+    "email_confirmed_at": "2026-06-26T02:11:50.439327Z",
+    "phone": "",
+    "confirmed_at": "2026-06-26T02:11:50.439327Z",
+    "last_sign_in_at": "2026-07-02T18:29:39.078078Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-06-26T02:11:50.396236Z",
+    "updated_at": "2026-09-05T22:17:03.478942Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "3fe8b190-c666-4d5c-a35e-14a344f4a401",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "javier.gonzalez.olivares@gmail.com",
+    "email_confirmed_at": "2026-06-26T02:06:10.747189Z",
+    "phone": "",
+    "confirmed_at": "2026-06-26T02:06:10.747189Z",
+    "last_sign_in_at": "2026-07-07T15:22:40.343987Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-06-26T02:06:10.716396Z",
+    "updated_at": "2026-08-21T15:26:54.591168Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "a1ced293-67b4-4649-b2c5-28f617dc9c5f",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "angelblack.cl@gmail.com",
+    "email_confirmed_at": "2026-06-26T02:04:06.911596Z",
+    "phone": "",
+    "confirmed_at": "2026-06-26T02:04:06.911596Z",
+    "last_sign_in_at": "2026-07-18T20:12:20.246035Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-06-26T02:04:06.898082Z",
+    "updated_at": "2026-07-18T20:12:20.283239Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "31ef200e-ce7f-413c-8e97-18bde36ce699",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "mkrt2591@gmail.com",
+    "email_confirmed_at": "2026-06-26T01:59:08.153779Z",
+    "phone": "",
+    "confirmed_at": "2026-06-26T01:59:08.153779Z",
+    "last_sign_in_at": "2026-07-18T22:03:22.306829Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-06-26T01:59:08.151109Z",
+    "updated_at": "2026-07-19T04:03:20.990383Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "d37ddc08-1b37-479a-9dee-7e669a9d9932",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "christian.troncoso@gmail.com",
+    "email_confirmed_at": "2026-06-26T01:58:41.620629Z",
+    "phone": "",
+    "confirmed_at": "2026-06-26T01:58:41.620629Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-06-26T01:58:41.617887Z",
+    "updated_at": "2026-06-26T01:58:41.621335Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "5c1e2ab3-a07a-4b02-9762-05123ff1f7fd",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "daniel.gomez.mo@gmail.com",
+    "email_confirmed_at": "2026-06-26T01:58:12.855063Z",
+    "phone": "",
+    "confirmed_at": "2026-06-26T01:58:12.855063Z",
+    "last_sign_in_at": "2026-07-03T13:57:08.529027Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-06-26T01:58:12.844205Z",
+    "updated_at": "2026-07-20T13:45:43.143599Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "cda5c368-37c9-4794-af30-6d263ef8f2da",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "cortez.oliver@gmail.com",
+    "email_confirmed_at": "2026-06-26T01:57:10.490409Z",
+    "phone": "",
+    "confirmed_at": "2026-06-26T01:57:10.490409Z",
+    "last_sign_in_at": "2026-07-02T15:23:39.728475Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-06-26T01:57:10.469895Z",
+    "updated_at": "2026-07-02T15:48:15.700351Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "6261a038-5acc-4694-b9d2-67b0f388dad2",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "klose1988@gmail.com",
+    "email_confirmed_at": "2026-06-26T01:55:35.998277Z",
+    "phone": "",
+    "confirmed_at": "2026-06-26T01:55:35.998277Z",
+    "last_sign_in_at": "2026-07-20T04:04:26.66087Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-06-26T01:55:35.992853Z",
+    "updated_at": "2026-07-20T04:04:26.70022Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "51eef923-3836-4c69-a39f-18933c32ae7e",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "c.pizarro.22@live.com",
+    "email_confirmed_at": "2026-06-26T01:54:47.681997Z",
+    "phone": "",
+    "confirmed_at": "2026-06-26T01:54:47.681997Z",
+    "last_sign_in_at": "2026-06-26T01:57:59.980532Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-06-26T01:54:47.675879Z",
+    "updated_at": "2026-08-09T15:40:00.506055Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "3131e896-2db4-48ad-bf81-736f9327fdb9",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "sebastian.p.aspee@gmail.com",
+    "email_confirmed_at": "2026-06-26T01:54:17.01028Z",
+    "phone": "",
+    "confirmed_at": "2026-06-26T01:54:17.01028Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-06-26T01:54:16.989468Z",
+    "updated_at": "2026-06-26T01:54:17.011364Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "5604a528-23a4-42cc-9f2f-e42b106276a8",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "evillarroelsan@gmail.com",
+    "email_confirmed_at": "2026-06-26T01:53:44.111989Z",
+    "phone": "",
+    "confirmed_at": "2026-06-26T01:53:44.111989Z",
+    "last_sign_in_at": "2026-07-03T02:18:53.282287Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-06-26T01:53:44.108266Z",
+    "updated_at": "2026-07-22T13:41:26.481084Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "ecf3d162-3cf3-4057-8ce0-d4e7448622de",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "atorresbravo@gmail.com",
+    "email_confirmed_at": "2026-06-26T01:52:53.120164Z",
+    "phone": "",
+    "confirmed_at": "2026-06-26T01:52:53.120164Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-06-26T01:52:53.103439Z",
+    "updated_at": "2026-06-26T01:52:53.120915Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "f304eaba-df33-4f40-807f-b56eb2afd783",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "fr.sepulveda.m@gmail.com",
+    "email_confirmed_at": "2026-06-26T01:51:02.40326Z",
+    "phone": "",
+    "confirmed_at": "2026-06-26T01:51:02.40326Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-06-26T01:51:02.395144Z",
+    "updated_at": "2026-06-26T01:51:02.404141Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "4e70ea50-13fe-4df4-b26f-f4a5bc099c2b",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "mauriciojavieramestica@gmail.com",
+    "email_confirmed_at": "2026-06-26T01:50:30.944124Z",
+    "phone": "",
+    "confirmed_at": "2026-06-26T01:50:30.944124Z",
+    "last_sign_in_at": "2026-07-02T21:08:33.1341Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-06-26T01:50:30.924589Z",
+    "updated_at": "2026-07-05T23:38:20.029396Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "c5385b4a-dd58-4651-bd0d-b2b117b0ffe8",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "alejandro.yanez.c@gmail.com",
+    "email_confirmed_at": "2026-06-26T01:45:34.035764Z",
+    "phone": "",
+    "confirmed_at": "2026-06-26T01:45:34.035764Z",
+    "last_sign_in_at": "2026-06-26T13:35:18.700828Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-06-26T01:45:34.02545Z",
+    "updated_at": "2026-07-31T03:57:52.303217Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "48347975-6613-4f5f-8cb0-fd613ec716ef",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "gustavotecno@gmail.com",
+    "email_confirmed_at": "2026-06-26T01:43:34.637163Z",
+    "phone": "",
+    "confirmed_at": "2026-06-26T01:43:34.637163Z",
+    "last_sign_in_at": "2026-07-07T17:43:51.963851Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-06-26T01:43:34.622499Z",
+    "updated_at": "2026-07-13T20:17:52.338526Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "c3890cdc-0c54-4e3d-a846-17bb41e7394a",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "musashi/alejandro.yanez.c@gmail.com",
+    "email_confirmed_at": "2026-06-26T01:41:58.733329Z",
+    "phone": "",
+    "confirmed_at": "2026-06-26T01:41:58.733329Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-06-26T01:41:58.70987Z",
+    "updated_at": "2026-06-26T01:41:58.73431Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "edee60b8-fb46-4525-bc62-36449f7ca763",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "soikel.resistencia@gmail.com",
+    "email_confirmed_at": "2026-06-26T01:38:50.091976Z",
+    "phone": "",
+    "confirmed_at": "2026-06-26T01:38:50.091976Z",
+    "last_sign_in_at": "2026-07-03T00:33:13.341503Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-06-26T01:38:50.079847Z",
+    "updated_at": "2026-07-18T12:44:00.035029Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "5316d792-a352-41bc-82fe-90828360ad5b",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "rdrf23@outlook.com",
+    "email_confirmed_at": "2026-06-26T01:37:05.466187Z",
+    "phone": "",
+    "confirmed_at": "2026-06-26T01:37:05.466187Z",
+    "last_sign_in_at": "2026-06-26T14:40:32.755539Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-06-26T01:37:05.436338Z",
+    "updated_at": "2026-07-11T21:09:21.051913Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "0bb85d78-937c-4b17-a4dc-8f90f70e4d13",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "vigaplan@gmail.com",
+    "email_confirmed_at": "2026-06-26T01:18:17.956549Z",
+    "phone": "",
+    "confirmed_at": "2026-06-26T01:18:17.956549Z",
+    "last_sign_in_at": "2026-06-26T01:18:58.503539Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-06-26T01:18:17.952424Z",
+    "updated_at": "2026-07-16T20:26:11.896819Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "10a5d563-387b-4b40-8c2c-9aee333a64f8",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "blackert@live.cl",
+    "email_confirmed_at": "2026-06-26T01:17:51.400577Z",
+    "phone": "",
+    "confirmed_at": "2026-06-26T01:17:51.400577Z",
+    "last_sign_in_at": "2026-07-02T20:39:11.628837Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-06-26T01:17:51.372797Z",
+    "updated_at": "2026-07-21T10:38:15.67654Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "bc99fe06-b0b6-4dd7-beaf-93b1364ebf6f",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "test@correo.cl",
+    "email_confirmed_at": "2026-06-25T23:26:26.180024Z",
+    "phone": "",
+    "confirmed_at": "2026-06-25T23:26:26.180024Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-06-25T23:26:26.147178Z",
+    "updated_at": "2026-06-25T23:26:26.181655Z",
+    "is_anonymous": false
+  },
+  {
+    "id": "b120fee7-6bf9-418b-a3fa-0e750a4faf69",
+    "aud": "authenticated",
+    "role": "authenticated",
+    "email": "contacto@whiteweb.cl",
+    "email_confirmed_at": "2026-06-25T19:25:58.82522Z",
+    "phone": "",
+    "confirmed_at": "2026-06-25T19:25:58.82522Z",
+    "last_sign_in_at": "2026-07-20T14:15:30.16778Z",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "email_verified": true
+    },
+    "identities": null,
+    "created_at": "2026-06-25T19:25:58.795949Z",
+    "updated_at": "2026-09-14T09:32:56.041937Z",
+    "is_anonymous": false
+  }
+]

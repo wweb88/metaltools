@@ -2,6 +2,7 @@
 import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Settings2, Target, Info } from "lucide-react";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const LEVEL_DATA = [
   { from: 1,  to: 2,  pieces: 25,   silver: 75    },
@@ -44,6 +45,7 @@ const SYSTEM_SECOND_DATA = [
 ];
 
 export function LevelCalculatorClient() {
+  const { t } = useLanguage();
   const [currentLevel, setCurrentLevel] = useState<number>(1);
   const [targetLevel, setTargetLevel] = useState<number>(2);
 
@@ -101,17 +103,17 @@ export function LevelCalculatorClient() {
     <div className="max-w-7xl mx-auto p-4 md:p-8 space-y-16">
       <header className="space-y-4 text-center">
         <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-gaming-accent)] to-[#00ff9d]">
-          Calculadoras de Mejora
+          {t.levelCalculator.title}
         </h1>
         <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-          Calcula exactamente los recursos que necesitas para subir de nivel tus aviones y sistemas.
+          {t.levelCalculator.subtitle}
         </p>
       </header>
 
       <section className="space-y-6">
         <div className="flex items-center gap-3 border-b border-white/10 pb-4">
           <Target className="w-8 h-8 text-[var(--color-gaming-accent)]" />
-          <h2 className="text-3xl font-bold uppercase tracking-wider text-white">Nivel del Avión</h2>
+          <h2 className="text-3xl font-bold uppercase tracking-wider text-white">{t.levelCalculator.planeSectionTitle}</h2>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative">
@@ -120,13 +122,13 @@ export function LevelCalculatorClient() {
             
             <div className="space-y-6">
               <div className="space-y-2">
-                <label className="text-sm font-bold text-gray-400 uppercase tracking-wider">Nivel Actual</label>
+                <label className="text-sm font-bold text-gray-400 uppercase tracking-wider">{t.levelCalculator.currentLevel}</label>
                 <select 
                   value={currentLevel}
                   onChange={(e) => handlePlaneCurrentChange(Number(e.target.value))}
                   className="w-full bg-black/60 border-2 border-white/10 rounded-xl px-4 py-4 text-xl font-black text-white focus:outline-none focus:border-[var(--color-gaming-accent)] transition-colors"
                 >
-                  {planeCurrentOptions.map(n => <option key={n} value={n}>Nivel {n}</option>)}
+                  {planeCurrentOptions.map(n => <option key={n} value={n}>{t.levelCalculator.levelOption} {n}</option>)}
                 </select>
               </div>
 
@@ -137,13 +139,13 @@ export function LevelCalculatorClient() {
               </div>
 
               <div className="space-y-2">
-                <label className="text-sm font-bold text-gray-400 uppercase tracking-wider">Nivel Deseado</label>
+                <label className="text-sm font-bold text-gray-400 uppercase tracking-wider">{t.levelCalculator.targetLevel}</label>
                 <select 
                   value={targetLevel}
                   onChange={(e) => setTargetLevel(Number(e.target.value))}
                   className="w-full bg-black/60 border-2 border-white/10 rounded-xl px-4 py-4 text-xl font-black text-[var(--color-gaming-accent)] focus:outline-none focus:border-[var(--color-gaming-accent)] transition-colors"
                 >
-                  {planeTargetOptions.map(n => <option key={n} value={n}>Nivel {n}</option>)}
+                  {planeTargetOptions.map(n => <option key={n} value={n}>{t.levelCalculator.levelOption} {n}</option>)}
                 </select>
               </div>
             </div>
@@ -152,16 +154,16 @@ export function LevelCalculatorClient() {
           <div className="glass-panel p-8 rounded-2xl space-y-8 relative overflow-hidden flex flex-col justify-center">
             <div className="absolute bottom-0 left-0 p-32 bg-[#00ff9d] opacity-5 blur-[100px] rounded-full pointer-events-none"></div>
             
-            <h3 className="text-xl font-bold uppercase tracking-wider text-white border-b border-white/10 pb-4 text-center">Costo del Avión</h3>
+            <h3 className="text-xl font-bold uppercase tracking-wider text-white border-b border-white/10 pb-4 text-center">{t.levelCalculator.planeCostTitle}</h3>
             
             <div className="space-y-6">
               <motion.div key={totalPieces + "p"} initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="bg-black/40 border border-white/5 p-6 rounded-xl flex items-center justify-between shadow-[inset_0_0_20px_rgba(0,0,0,0.5)]">
                 <div className="flex items-center gap-4">
                   <div className="p-2 bg-black/40 rounded-lg border border-white/10 flex items-center justify-center">
-                    <img src="/assets/images/pieces.png" alt="Piezas" className="w-10 h-10 object-contain" />
+                    <img src="/assets/images/pieces.png" alt={t.levelCalculator.pieces} className="w-10 h-10 object-contain" />
                   </div>
                   <div>
-                    <p className="text-gray-400 text-sm font-bold uppercase tracking-wider">Piezas</p>
+                    <p className="text-gray-400 text-sm font-bold uppercase tracking-wider">{t.levelCalculator.pieces}</p>
                     <p className="text-3xl font-black text-white">{totalPieces.toLocaleString()}</p>
                   </div>
                 </div>
@@ -170,10 +172,10 @@ export function LevelCalculatorClient() {
               <motion.div key={totalPlaneSilver + "s"} initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="bg-black/40 border border-white/5 p-6 rounded-xl flex items-center justify-between shadow-[inset_0_0_20px_rgba(0,0,0,0.5)]">
                 <div className="flex items-center gap-4">
                   <div className="p-2 bg-black/40 rounded-lg border border-white/10 flex items-center justify-center">
-                    <img src="/assets/images/silver.png" alt="Plata" className="w-10 h-10 object-contain" />
+                    <img src="/assets/images/silver.png" alt={t.levelCalculator.silver} className="w-10 h-10 object-contain" />
                   </div>
                   <div>
-                    <p className="text-gray-400 text-sm font-bold uppercase tracking-wider">Plata</p>
+                    <p className="text-gray-400 text-sm font-bold uppercase tracking-wider">{t.levelCalculator.silver}</p>
                     <p className="text-3xl font-black text-white">{totalPlaneSilver.toLocaleString()}</p>
                   </div>
                 </div>
@@ -186,7 +188,7 @@ export function LevelCalculatorClient() {
       <section className="space-y-6">
         <div className="flex items-center gap-3 border-b border-white/10 pb-4">
           <Settings2 className="w-8 h-8 text-[var(--color-gaming-secondary)]" />
-          <h2 className="text-3xl font-bold uppercase tracking-wider text-white">Sistemas del Avión</h2>
+          <h2 className="text-3xl font-bold uppercase tracking-wider text-white">{t.levelCalculator.systemsSectionTitle}</h2>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative">
@@ -198,10 +200,10 @@ export function LevelCalculatorClient() {
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-2">
                 <div className="flex items-center gap-2 relative group w-fit">
-                  <label className="text-xs font-bold text-gray-400 uppercase tracking-wider cursor-help">Pestañas / Sistemas</label>
+                  <label className="text-xs font-bold text-gray-400 uppercase tracking-wider cursor-help">{t.levelCalculator.tabsSystemsLabel}</label>
                   <Info className="w-4 h-4 text-gray-500 cursor-help" />
                   <div className="absolute bottom-full mb-2 left-0 hidden group-hover:block w-64 p-3 bg-[#0b0f19] border border-[var(--color-gaming-secondary)] rounded-lg text-xs text-gray-300 z-50 shadow-2xl">
-                    Número total de sistemas principales que tiene el avión (Fuselaje, Motores, Aviónica, Cañones, etc.). No cuentes la primera pestaña "Aeronave" porque no usa piezas de sistema.
+                    {t.levelCalculator.tabsSystemsTooltip}
                   </div>
                 </div>
                 <select value={systemCount} onChange={(e) => {
@@ -214,10 +216,10 @@ export function LevelCalculatorClient() {
               </div>
               <div className="space-y-2">
                 <div className="flex items-center gap-2 relative group w-fit">
-                  <label className="text-xs font-bold text-gray-400 uppercase tracking-wider cursor-help">Ramas Sec. (Nvl 5+)</label>
+                  <label className="text-xs font-bold text-gray-400 uppercase tracking-wider cursor-help">{t.levelCalculator.secondaryBranchesLabel}</label>
                   <Info className="w-4 h-4 text-gray-500 cursor-help" />
                   <div className="absolute bottom-full mb-2 left-0 hidden group-hover:block w-64 p-3 bg-[#0b0f19] border border-[var(--color-gaming-secondary)] rounded-lg text-xs text-gray-300 z-50 shadow-2xl">
-                    Cantidad de armas secundarias (usualmente misiles) que tiene tu avión. Estas mejoras aparecen a partir del Nivel 5 del avión y tienen un costo de recursos ligeramente distinto.
+                    {t.levelCalculator.secondaryBranchesTooltip}
                   </div>
                 </div>
                 <select value={secondaryBranchCount} onChange={(e) => setSecondaryBranchCount(Number(e.target.value))} className="w-full bg-black/60 border-2 border-white/10 rounded-xl px-4 py-3 text-lg font-black text-white focus:outline-none focus:border-[var(--color-gaming-secondary)] transition-colors">
@@ -227,9 +229,9 @@ export function LevelCalculatorClient() {
             </div>
 
             <div className="space-y-2 mt-4">
-              <label className="text-sm font-bold text-gray-400 uppercase tracking-wider">Nivel Actual</label>
+              <label className="text-sm font-bold text-gray-400 uppercase tracking-wider">{t.levelCalculator.currentLevel}</label>
               <select value={sysCurrentLevel} onChange={(e) => handleSysCurrentChange(Number(e.target.value))} className="w-full bg-black/60 border-2 border-white/10 rounded-xl px-4 py-4 text-xl font-black text-white focus:outline-none focus:border-[var(--color-gaming-secondary)] transition-colors">
-                {sysCurrentOptions.map(n => <option key={n} value={n}>Nivel {n}</option>)}
+                {sysCurrentOptions.map(n => <option key={n} value={n}>{t.levelCalculator.levelOption} {n}</option>)}
               </select>
             </div>
 
@@ -240,9 +242,9 @@ export function LevelCalculatorClient() {
             </div>
 
             <div className="space-y-2">
-              <label className="text-sm font-bold text-gray-400 uppercase tracking-wider">Nivel Deseado</label>
+              <label className="text-sm font-bold text-gray-400 uppercase tracking-wider">{t.levelCalculator.targetLevel}</label>
               <select value={sysTargetLevel} onChange={(e) => setSysTargetLevel(Number(e.target.value))} className="w-full bg-black/60 border-2 border-white/10 rounded-xl px-4 py-4 text-xl font-black text-[var(--color-gaming-secondary)] focus:outline-none focus:border-[var(--color-gaming-secondary)] transition-colors">
-                {sysTargetOptions.map(n => <option key={n} value={n}>Nivel {n}</option>)}
+                {sysTargetOptions.map(n => <option key={n} value={n}>{t.levelCalculator.levelOption} {n}</option>)}
               </select>
             </div>
           </div>
@@ -250,16 +252,16 @@ export function LevelCalculatorClient() {
           <div className="glass-panel p-8 rounded-2xl space-y-6 relative overflow-hidden flex flex-col justify-center">
             <div className="absolute bottom-0 left-0 p-32 bg-[var(--color-gaming-secondary)] opacity-5 blur-[100px] rounded-full pointer-events-none"></div>
             
-            <h3 className="text-xl font-bold uppercase tracking-wider text-white border-b border-white/10 pb-4 text-center">Costo de Sistemas</h3>
+            <h3 className="text-xl font-bold uppercase tracking-wider text-white border-b border-white/10 pb-4 text-center">{t.levelCalculator.systemsCostTitle}</h3>
             
             <div className="space-y-4">
               <motion.div key={sysParts + "sp"} initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="bg-black/40 border border-white/5 p-5 rounded-xl flex items-center justify-between shadow-[inset_0_0_20px_rgba(0,0,0,0.5)]">
                 <div className="flex items-center gap-4">
                   <div className="p-2 bg-black/40 rounded-lg border border-white/10 flex items-center justify-center">
-                    <img src="/assets/images/system-parts.webp" alt="System Parts" className="w-10 h-10 object-contain" />
+                    <img src="/assets/images/system-parts.webp" alt={t.levelCalculator.systemParts} className="w-10 h-10 object-contain" />
                   </div>
                   <div>
-                    <p className="text-gray-400 text-xs md:text-sm font-bold uppercase tracking-wider">System Parts</p>
+                    <p className="text-gray-400 text-xs md:text-sm font-bold uppercase tracking-wider">{t.levelCalculator.systemParts}</p>
                     <p className="text-2xl md:text-3xl font-black text-white">{sysParts.toLocaleString()}</p>
                   </div>
                 </div>
@@ -268,10 +270,10 @@ export function LevelCalculatorClient() {
               <motion.div key={advParts + "ap"} initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="bg-black/40 border border-white/5 p-5 rounded-xl flex items-center justify-between shadow-[inset_0_0_20px_rgba(0,0,0,0.5)]">
                 <div className="flex items-center gap-4">
                   <div className="p-2 bg-black/40 rounded-lg border border-white/10 flex items-center justify-center">
-                    <img src="/assets/images/advanced-parts.webp" alt="Advanced Parts" className="w-10 h-10 object-contain" />
+                    <img src="/assets/images/advanced-parts.webp" alt={t.levelCalculator.advancedParts} className="w-10 h-10 object-contain" />
                   </div>
                   <div>
-                    <p className="text-gray-400 text-xs md:text-sm font-bold uppercase tracking-wider">Advanced Parts</p>
+                    <p className="text-gray-400 text-xs md:text-sm font-bold uppercase tracking-wider">{t.levelCalculator.advancedParts}</p>
                     <p className="text-2xl md:text-3xl font-black text-[var(--color-gaming-secondary)]">{advParts.toLocaleString()}</p>
                   </div>
                 </div>
@@ -280,10 +282,10 @@ export function LevelCalculatorClient() {
               <motion.div key={sysSilver + "ss"} initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="bg-black/40 border border-white/5 p-5 rounded-xl flex items-center justify-between shadow-[inset_0_0_20px_rgba(0,0,0,0.5)]">
                 <div className="flex items-center gap-4">
                   <div className="p-2 bg-black/40 rounded-lg border border-white/10 flex items-center justify-center">
-                    <img src="/assets/images/silver.png" alt="Plata" className="w-10 h-10 object-contain" />
+                    <img src="/assets/images/silver.png" alt={t.levelCalculator.systemsSilver} className="w-10 h-10 object-contain" />
                   </div>
                   <div>
-                    <p className="text-gray-400 text-xs md:text-sm font-bold uppercase tracking-wider">Plata (Sistemas)</p>
+                    <p className="text-gray-400 text-xs md:text-sm font-bold uppercase tracking-wider">{t.levelCalculator.systemsSilver}</p>
                     <p className="text-2xl md:text-3xl font-black text-white">{sysSilver.toLocaleString()}</p>
                   </div>
                 </div>

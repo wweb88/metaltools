@@ -1,0 +1,303 @@
+[
+  {
+    "id": "744f0566-5759-412c-890f-0fbfae451405",
+    "name": "F3-R",
+    "class": "Medium Fighter",
+    "image_url": "/assets/planes/icons/jet-rafale-b-icon-solid.png",
+    "sub_name": "RAFALE"
+  },
+  {
+    "id": "9faf6a38-f4c5-4dea-a5d3-eef6a155fe69",
+    "name": "TORNADO",
+    "class": "Heavy Fighter",
+    "image_url": "/assets/planes/icons/jet-tornado-icon-solid.png",
+    "sub_name": "ADV"
+  },
+  {
+    "id": "c02bb980-1595-4cd4-b961-232cbf6d583d",
+    "name": "MIRAGE",
+    "class": "Medium Fighter",
+    "image_url": "/assets/planes/icons/jet-mirage-2000-icon-solid.png",
+    "sub_name": "2000"
+  },
+  {
+    "id": "7e1a9abb-849e-4b23-8b72-6c4ffeb2122c",
+    "name": "JAS39",
+    "class": "Light Fighter",
+    "image_url": "/assets/planes/icons/jet-jas39e-gripen-icon-solid.png",
+    "sub_name": "GRIPEN"
+  },
+  {
+    "id": "ff805203-9890-45a9-970d-832f06800bc9",
+    "name": "F-16",
+    "class": "Light Fighter",
+    "image_url": "/assets/planes/icons/jet-f16-icon-solid.png",
+    "sub_name": "Fighting Falcon"
+  },
+  {
+    "id": "cba62d68-0d9e-487c-aac6-a8dc35aa9b44",
+    "name": "MiG-19",
+    "class": "Light Fighter",
+    "image_url": "/assets/planes/icons/jet-mig19-icon-solid.png",
+    "sub_name": "Farmer"
+  },
+  {
+    "id": "50cd60fa-b2b1-4d02-b393-2861a01c3663",
+    "name": "FGR4",
+    "class": "Medium Fighter",
+    "image_url": "/assets/planes/icons/jet-typhoon-icon-solid.png",
+    "sub_name": "Typhoon"
+  },
+  {
+    "id": "f5d6a7c9-352c-4bea-af5e-173e16106c10",
+    "name": "F1",
+    "class": "Light Fighter",
+    "image_url": "/assets/planes/icons/jet-mirage-f1c-icon-solid.png",
+    "sub_name": "Mirage"
+  },
+  {
+    "id": "da9c2fc5-dc13-47d5-8d92-4aa386aaf70b",
+    "name": "A-4",
+    "class": "Attack",
+    "image_url": "/assets/planes/icons/jet-a4-icon-solid.png",
+    "sub_name": "Skyhawk"
+  },
+  {
+    "id": "75e18772-c57e-42d2-b2b9-a27a68f9ecba",
+    "name": "JA37",
+    "class": "Medium Fighter",
+    "image_url": "/assets/planes/icons/jet-ja37di-viggen-icon-solid.png",
+    "sub_name": "Viggen"
+  },
+  {
+    "id": "80db321d-ddf7-4152-9308-cd79e6ac4867",
+    "name": "Su-47",
+    "class": "Heavy Fighter",
+    "image_url": "/assets/planes/icons/jet-su47-icon-solid.png",
+    "sub_name": "Berkut"
+  },
+  {
+    "id": "d69b3615-3338-43e5-a55a-dc83861f68a9",
+    "name": "MiG-29",
+    "class": "Medium Fighter",
+    "image_url": "/assets/planes/icons/jet-mig29-icon-solid.png",
+    "sub_name": "Fulcrum"
+  },
+  {
+    "id": "1647afc4-d7bb-4f87-94d9-41a506e67f75",
+    "name": "Su-35",
+    "class": "Heavy Fighter",
+    "image_url": "/assets/planes/icons/jet-su35s-icon-solid.png",
+    "sub_name": "Super Flanker"
+  },
+  {
+    "id": "91d2baee-ef84-4b7b-8d2f-696e081268cb",
+    "name": "GR3",
+    "class": "Attack",
+    "image_url": "/assets/planes/icons/jet-jaguar-icon-solid.png",
+    "sub_name": "Jaguar"
+  },
+  {
+    "id": "9ca1e583-839a-4996-8645-f2950109ace5",
+    "name": "Su-57",
+    "class": "Heavy Fighter",
+    "image_url": "/assets/planes/icons/jet-su57-icon-solid.png",
+    "sub_name": "Felon"
+  },
+  {
+    "id": "4fc671f0-efd8-4176-bfbb-23ce06119c48",
+    "name": "F-22",
+    "class": "Heavy Fighter",
+    "image_url": "/assets/planes/icons/jet-f22-icon-solid.png",
+    "sub_name": "Raptor"
+  },
+  {
+    "id": "2dfa3c1e-2219-4c6c-bb58-069d70cbbf65",
+    "name": "F-5",
+    "class": "Light Fighter",
+    "image_url": "/assets/planes/icons/jet-f5-icon-solid.png",
+    "sub_name": "Tiger"
+  },
+  {
+    "id": "9fe1e203-484b-4a8c-a5b0-1d2ce260bf0b",
+    "name": "F-35",
+    "class": "Medium Fighter",
+    "image_url": "/assets/planes/icons/jet-f35c-icon-solid.png",
+    "sub_name": "Lightning"
+  },
+  {
+    "id": "09351075-a9ce-418c-81e3-8e76bc1a5c59",
+    "name": "J-20",
+    "class": "Interceptor",
+    "image_url": "/assets/planes/icons/jet-j20-icon-solid.png",
+    "sub_name": "Mighty Dragon"
+  },
+  {
+    "id": "b13baa91-a925-476f-a9ff-7eca490bce05",
+    "name": "F-111",
+    "class": "Interceptor",
+    "image_url": "/assets/planes/icons/jet-f111-icon-solid.png",
+    "sub_name": "Aardvark"
+  },
+  {
+    "id": "0f1a3b92-a83f-4acf-86fc-13cd712c98f4",
+    "name": "J-10",
+    "class": "Medium Fighter",
+    "image_url": "/assets/planes/icons/jet-j10-icon-solid.png",
+    "sub_name": "Firebird"
+  },
+  {
+    "id": "0224f5c3-b0f4-4960-9067-234ad9522465",
+    "name": "Jf-17",
+    "class": "Light Fighter",
+    "image_url": "/assets/planes/icons/jet-jf17-icon-solid.png",
+    "sub_name": "Thunder"
+  },
+  {
+    "id": "ef587922-f16b-4e06-bd20-3a4dc97c0ba6",
+    "name": "MiG-21",
+    "class": "Light Fighter",
+    "image_url": "/assets/planes/icons/jet-mig21-icon-solid.png",
+    "sub_name": "Fishbed"
+  },
+  {
+    "id": "9ab4fa35-050a-4aae-9418-d1fb5dac3aad",
+    "name": "A-10",
+    "class": "Attack",
+    "image_url": "/assets/planes/icons/jet-a10-icon-solid.png",
+    "sub_name": "Thunderbolt"
+  },
+  {
+    "id": "ee5b0a3e-a01d-4650-9fd8-57d1bd086b74",
+    "name": "M.III",
+    "class": "Light Fighter",
+    "image_url": "/assets/planes/icons/jet-mirage-iii-icon-solid.png",
+    "sub_name": "Mirage"
+  },
+  {
+    "id": "2569a3dc-ba08-4e31-851a-92fc1761b852",
+    "name": "MiG-23",
+    "class": "Light Fighter",
+    "image_url": "/assets/planes/icons/jet-mig23-icon-solid.png",
+    "sub_name": "Flogger"
+  },
+  {
+    "id": "3700d587-5f09-4591-9462-3a455bde7e7a",
+    "name": "Su-30",
+    "class": "Heavy Fighter",
+    "image_url": "/assets/planes/icons/jet-su30-icon-solid.png",
+    "sub_name": "Strike Flanker"
+  },
+  {
+    "id": "8e2c1a78-5c18-4a9a-9d22-4040c6f41acb",
+    "name": "Su-34",
+    "class": "Attack",
+    "image_url": "/assets/planes/icons/jet-su34-icon-solid.png",
+    "sub_name": "Fullback"
+  },
+  {
+    "id": "ae35d3db-98fc-4bd5-8574-976b285e1c5b",
+    "name": "Su-22",
+    "class": "Attack",
+    "image_url": "/assets/planes/icons/jet-su22-icon-solid.png",
+    "sub_name": "Fitter"
+  },
+  {
+    "id": "c5fe267e-ccf2-4e9c-8095-84c316fe6f28",
+    "name": "J35",
+    "class": "Medium Fighter",
+    "image_url": "/assets/planes/icons/jet-saab35-draken-icon-solid.png",
+    "sub_name": "Draken"
+  },
+  {
+    "id": "3e95e89d-8e2a-437c-beb3-e0c9fb554bcb",
+    "name": "Su-33",
+    "class": "Heavy Fighter",
+    "image_url": "/assets/planes/icons/jet-su33-icon-solid.png",
+    "sub_name": "Sea Flanker"
+  },
+  {
+    "id": "722a2b2d-69e2-45d1-9e7f-00af0ead4b52",
+    "name": "F/A-18F",
+    "class": "Heavy Fighter",
+    "image_url": "/assets/planes/icons/jet-f18f-icon-solid.png",
+    "sub_name": "Super Hornet"
+  },
+  {
+    "id": "879ba409-55a4-49d6-9e7c-2db55b33e88b",
+    "name": "F/A-18",
+    "class": "Medium Fighter",
+    "image_url": "/assets/planes/icons/jet-f18c-icon-solid.png",
+    "sub_name": "Hornet"
+  },
+  {
+    "id": "5250018e-226b-49b4-98b6-27cbdb8fc44d",
+    "name": "F-15",
+    "class": "Heavy Fighter",
+    "image_url": "/assets/planes/icons/jet-f15c-icon-solid.png",
+    "sub_name": "Eagle"
+  },
+  {
+    "id": "a7201673-ab3b-428a-821e-d45c41227bb4",
+    "name": "Su-27",
+    "class": "Heavy Fighter",
+    "image_url": "/assets/planes/icons/jet-su27-icon-solid.png",
+    "sub_name": "Flanker"
+  },
+  {
+    "id": "cb8747b0-79f1-48c3-b2b7-a1c04ccda2fb",
+    "name": "F-4",
+    "class": "Heavy Fighter",
+    "image_url": "/assets/planes/icons/jet-f4-icon-solid.png",
+    "sub_name": "Phantom"
+  },
+  {
+    "id": "14912764-e6c4-4a43-a899-fd38fc5ec5f2",
+    "name": "F-14",
+    "class": "Interceptor",
+    "image_url": "/assets/planes/icons/jet-f14d-icon-solid.png",
+    "sub_name": "Tomcat"
+  },
+  {
+    "id": "8f0bb198-117d-4e5c-bf98-af1e13c16b62",
+    "name": "F-106",
+    "class": "Medium Fighter",
+    "image_url": "/assets/planes/icons/jet-f106a-icon-solid.png",
+    "sub_name": "Delta Dart"
+  },
+  {
+    "id": "24394d1b-cc6e-4a49-8313-036d0931c31c",
+    "name": "MiG-31",
+    "class": "Interceptor",
+    "image_url": "/assets/planes/icons/jet-mig31-icon-solid.png",
+    "sub_name": "Foxhound"
+  },
+  {
+    "id": "ce372b28-406d-4b86-ba00-b166adf74fd6",
+    "name": "A-6",
+    "class": "Attack",
+    "image_url": "/assets/planes/icons/jet-a6e-icon-solid.png",
+    "sub_name": "Intruder"
+  },
+  {
+    "id": "88586b1e-f2c5-4c26-aee2-32920bc657bd",
+    "name": "Su-25",
+    "class": "Attack",
+    "image_url": "/assets/planes/icons/jet-su25-icon-solid.png",
+    "sub_name": "Frogfoot"
+  },
+  {
+    "id": "d07f0168-006f-4619-963a-6eaf5f84e315",
+    "name": "F-100",
+    "class": "Medium Fighter",
+    "image_url": "/assets/planes/icons/jet-f100-icon-solid.png",
+    "sub_name": "Super Sabre"
+  },
+  {
+    "id": "e1565576-1d33-4987-8405-0005d908ad9d",
+    "name": "KF-21",
+    "class": "Medium Fighter",
+    "image_url": "/assets/planes/icons/jet-kf21-icon-solid.png",
+    "sub_name": "Boramae"
+  }
+]
