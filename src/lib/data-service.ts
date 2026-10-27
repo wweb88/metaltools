@@ -12,6 +12,22 @@ export interface Jugador {
   aviones: Avion[];
 }
 
+export interface ModInfo {
+  id: number;
+  image: string;
+}
+
+export interface ModGameInfo {
+  id: number;
+  image: string;
+}
+
+export interface PlaneModGame {
+  idModsGame: number;
+  mods: number[];
+  tacticalImage?: string;
+}
+
 export interface PlaneInfo {
   name: string;
   subName: string;
@@ -19,6 +35,8 @@ export interface PlaneInfo {
   image: string;
   imageBig: string;
   tacticalImages?: string[];
+  mods?: number[];
+  modsGame?: PlaneModGame[];
 }
 
 export interface TypeInfo {
@@ -52,6 +70,34 @@ export async function fetchPlanesInfo(): Promise<PlaneInfo[]> {
     return data.planes as PlaneInfo[];
   } catch (error) {
     console.error('Error fetching dataInfo.json:', error);
+    return [];
+  }
+}
+
+export async function fetchModsInfo(): Promise<ModInfo[]> {
+  try {
+    const response = await fetch('/assets/files/dataInfo.json');
+    if (!response.ok) throw new Error("Network response was not ok");
+    const text = await response.text();
+    const cleanText = text.replace(/^\uFEFF/, '');
+    const data = JSON.parse(cleanText);
+    return (data.mods || []) as ModInfo[];
+  } catch (error) {
+    console.error('Error fetching mods from dataInfo.json:', error);
+    return [];
+  }
+}
+
+export async function fetchModsGamesInfo(): Promise<ModGameInfo[]> {
+  try {
+    const response = await fetch('/assets/files/dataInfo.json');
+    if (!response.ok) throw new Error("Network response was not ok");
+    const text = await response.text();
+    const cleanText = text.replace(/^\uFEFF/, '');
+    const data = JSON.parse(cleanText);
+    return (data.modsGames || []) as ModGameInfo[];
+  } catch (error) {
+    console.error('Error fetching modsGames from dataInfo.json:', error);
     return [];
   }
 }

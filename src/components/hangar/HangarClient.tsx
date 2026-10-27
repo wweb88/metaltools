@@ -1,9 +1,16 @@
 "use client";
 import { useState, useEffect, useMemo } from "react";
-import { Plane, Loader2, Images, X, ChevronLeft, ChevronRight, ZoomIn, ZoomOut } from "lucide-react";
+import { Plane, Loader2, Images, X, ZoomIn, ZoomOut } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/i18n/LanguageContext";
-import { fetchPlanesInfo, PlaneInfo } from "@/lib/data-service";
+import {
+  fetchPlanesInfo,
+  fetchModsInfo,
+  fetchModsGamesInfo,
+  PlaneInfo,
+  ModInfo,
+  ModGameInfo,
+} from "@/lib/data-service";
 
 export type PlaneRole =
   | "Light Fighter"
@@ -49,17 +56,27 @@ function RoleIcon({ role, className = "w-6 h-6" }: { role: PlaneRole; className?
 export function HangarClient() {
   const { t } = useLanguage();
   const [planes, setPlanes] = useState<PlaneInfo[]>([]);
+  const [mods, setMods] = useState<ModInfo[]>([]);
+  const [modsGames, setModsGames] = useState<ModGameInfo[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedRole, setSelectedRole] = useState<PlaneRole | "ALL">("ALL");
+  const [selectedGameMode, setSelectedGameMode] = useState<number>(2);
   const [activeGalleryPlane, setActiveGalleryPlane] = useState<PlaneInfo | null>(null);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isZoomed, setIsZoomed] = useState(false);
 
   useEffect(() => {
-    fetchPlanesInfo()
-      .then((data) => setPlanes(data))
+    Promise.all([fetchPlanesInfo(), fetchModsInfo(), fetchModsGamesInfo()])
+      .then(([planesData, modsData, modsGamesData]) => {
+        setPlanes(planesData);
+        setMods(modsData);
+        setModsGames(modsGamesData);
+      })
       .finally(() => setLoading(false));
   }, []);
+
+  const modsMap = useMemo(() => {
+    return new Map(mods.map((mod) => [mod.id, mod.image]));
+  }, [mods]);
 
   const sortedAirplanes = useMemo(() => {
     return [...planes].sort((a, b) => a.name.localeCompare(b.name));
@@ -72,29 +89,21 @@ export function HangarClient() {
 
   const openGallery = (plane: PlaneInfo) => {
     setActiveGalleryPlane(plane);
-    setCurrentImageIndex(0);
     setIsZoomed(false);
   };
 
   const closeGallery = () => {
     setActiveGalleryPlane(null);
-    setCurrentImageIndex(0);
     setIsZoomed(false);
   };
 
-  const galleryImages = activeGalleryPlane?.tacticalImages || [];
-
-  const handleNext = () => {
-    if (galleryImages.length === 0) return;
-    setCurrentImageIndex((prev) => (prev + 1) % galleryImages.length);
-    setIsZoomed(false);
-  };
-
-  const handlePrev = () => {
-    if (galleryImages.length === 0) return;
-    setCurrentImageIndex((prev) => (prev - 1 + galleryImages.length) % galleryImages.length);
-    setIsZoomed(false);
-  };
+  const activeTacticalImage = useMemo(() => {
+    if (!activeGalleryPlane) return "";
+    const entry = activeGalleryPlane.modsGame?.find(
+      (m) => m.idModsGame === selectedGameMode
+    );
+    return entry?.tacticalImage?.trim() || "";
+  }, [activeGalleryPlane, selectedGameMode]);
 
   return (
     <div className="max-w-[1600px] mx-auto p-4 md:p-8 space-y-8">
@@ -158,6 +167,43 @@ export function HangarClient() {
               );
             })}
           </div>
+
+          {modsGames.length > 0 && (
+            <div className="mt-6 pt-5 border-t border-white/10">
+              <p className="text-sm font-extrabold uppercase tracking-wider text-gray-300 mb-4">
+                {t.hangarPage.gameModeFilter}
+              </p>
+              <div className="flex flex-col gap-1.5">
+                {modsGames.map((mode) => {
+                  const isSelected = selectedGameMode === mode.id;
+                  const modeLabel =
+                    t.hangarPage.gameModes[
+                      mode.id as keyof typeof t.hangarPage.gameModes
+                    ] || `Mode ${mode.id}`;
+                  return (
+                    <button
+                      key={mode.id}
+                      type="button"
+                      onClick={() => setSelectedGameMode(mode.id)}
+                      className={cn(
+                        "w-full flex items-center gap-3.5 px-3.5 py-2.5 rounded-lg font-extrabold uppercase tracking-wider text-sm transition-all cursor-pointer text-left",
+                        isSelected
+                          ? "bg-black/60 text-white border border-white/80 shadow-[0_0_12px_rgba(255,255,255,0.15)]"
+                          : "text-gray-300 hover:text-white hover:bg-white/5 border border-transparent"
+                      )}
+                    >
+                      <img
+                        src={mode.image}
+                        alt={modeLabel}
+                        className="w-6 h-6 object-contain shrink-0"
+                      />
+                      <span>{modeLabel}</span>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          )}
         </aside>
 
         {/* Grilla de Aviones (mismo diseño de tarjetas de las secciones administrables) */}
@@ -175,7 +221,17 @@ export function HangarClient() {
                 const role = (plane.type as PlaneRole) in ROLE_COLORS
                   ? (plane.type as PlaneRole)
                   : "Light Fighter";
-                const tacticalCount = plane.tacticalImages?.length || 0;
+                const modeModsEntry = plane.modsGame?.find(
+                  (entry) => entry.idModsGame === selectedGameMode
+                );
+                const tacticalImage = modeModsEntry?.tacticalImage?.trim() || "";
+                const activeModIds = modeModsEntry?.mods || plane.mods || [];
+                const planeMods = activeModIds
+                  .map((modId) => {
+                    const image = modsMap.get(modId);
+                    return image ? { id: modId, image } : null;
+                  })
+                  .filter((mod): mod is ModInfo => mod !== null);
 
                 return (
                   <div
@@ -203,7 +259,7 @@ export function HangarClient() {
 
                     {/* Imagen del Avión */}
                     <div className="relative h-40 w-full flex items-center justify-center p-4">
-                      {tacticalCount > 0 && (
+                      {tacticalImage && (
                         <div className="absolute top-2 left-2 flex flex-col gap-2 z-20">
                           <button
                             type="button"
@@ -212,9 +268,6 @@ export function HangarClient() {
                             title={t.hangarPage.tacticalGuides}
                           >
                             <Images className="w-4 h-4" />
-                            <span className="absolute -top-1.5 -right-1.5 bg-red-500 text-white text-[9px] font-black w-4 h-4 rounded-full flex items-center justify-center">
-                              {tacticalCount}
-                            </span>
                           </button>
                         </div>
                       )}
@@ -227,6 +280,19 @@ export function HangarClient() {
                           (e.target as HTMLImageElement).src = plane.image;
                         }}
                       />
+
+                      {planeMods.length > 0 && (
+                        <div className="absolute bottom-2 right-2 flex items-center gap-[4px] z-20">
+                          {planeMods.map((mod, idx) => (
+                            <img
+                              key={`${mod.id}-${idx}`}
+                              src={mod.image}
+                              alt={`Mod ${mod.id}`}
+                              className="w-[36px] h-auto object-contain drop-shadow-md pointer-events-none"
+                            />
+                          ))}
+                        </div>
+                      )}
                     </div>
                   </div>
                 );
@@ -237,7 +303,7 @@ export function HangarClient() {
       </div>
 
       {/* Modal de Imágenes Tácticas (solo imagen, sin comentarios) */}
-      {activeGalleryPlane && galleryImages.length > 0 && (
+      {activeGalleryPlane && activeTacticalImage && (
         <div className="fixed inset-0 z-[60] flex items-center justify-center p-4">
           <div
             className="absolute inset-0 bg-black/90 backdrop-blur-md"
@@ -249,12 +315,6 @@ export function HangarClient() {
                 <h3 className="text-xl font-black text-white uppercase tracking-wider">
                   {t.hangarPage.tacticalGuides} - {activeGalleryPlane.name}
                 </h3>
-                {galleryImages.length > 1 && (
-                  <p className="text-sm text-gray-400 font-bold tracking-widest uppercase mt-1">
-                    {t.hangarPage.imageLabel} {currentImageIndex + 1} {t.hangarPage.ofLabel}{" "}
-                    {galleryImages.length}
-                  </p>
-                )}
               </div>
 
               <div className="flex gap-2">
@@ -283,19 +343,9 @@ export function HangarClient() {
                   : "overflow-hidden flex items-center justify-center"
               )}
             >
-              {galleryImages.length > 1 && !isZoomed && (
-                <button
-                  type="button"
-                  onClick={handlePrev}
-                  className="absolute left-4 z-20 p-3 bg-black/60 hover:bg-[var(--color-gaming-accent)] text-white hover:text-black rounded-full backdrop-blur transition-all cursor-pointer"
-                >
-                  <ChevronLeft className="w-6 h-6" />
-                </button>
-              )}
-
               <img
-                key={galleryImages[currentImageIndex]}
-                src={galleryImages[currentImageIndex]}
+                key={activeTacticalImage}
+                src={activeTacticalImage}
                 alt={`${activeGalleryPlane.name} Tactical Guide`}
                 className={cn(
                   "animate-in fade-in duration-300",
@@ -305,16 +355,6 @@ export function HangarClient() {
                 )}
                 onClick={() => setIsZoomed(!isZoomed)}
               />
-
-              {galleryImages.length > 1 && !isZoomed && (
-                <button
-                  type="button"
-                  onClick={handleNext}
-                  className="absolute right-4 z-20 p-3 bg-black/60 hover:bg-[var(--color-gaming-accent)] text-white hover:text-black rounded-full backdrop-blur transition-all cursor-pointer"
-                >
-                  <ChevronRight className="w-6 h-6" />
-                </button>
-              )}
             </div>
           </div>
         </div>
