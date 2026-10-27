@@ -83,7 +83,12 @@
       "subName": "RAFALE",
       "type": "Medium Fighter",
       "image": "/assets/planes/icons/jet-rafale-b-icon-solid.png",
-      "imageBig": "F3-R.png"
+      "imageBig": "F3-R.png",
+      "modsGame" : [
+        { "idModsGame" : 1 , "mods" : [ 3 , 2 ] , "tacticalImage": "/assets/planes/tactical/rafale-upgrades.jpg" } ,
+        { "idModsGame" : 2 , "mods" : [ 3 , 2 ] , "tacticalImage": "/assets/planes/tactical/rafale-upgrades.jpg" } ,
+        { "idModsGame" : 3 , "mods" : [ 3 , 2 ] , "tacticalImage": "/assets/planes/tactical/rafale-upgrades.jpg" }
+      ]
     },
     {
       "name": "TORNADO",
@@ -92,9 +97,9 @@
       "image": "/assets/planes/icons/jet-tornado-icon-solid.png",
       "imageBig": "TORNADO.png",
       "modsGame" : [
-        { "idModsGame" : 1 , "mods" : [ 3 , 2 ] , "tacticalImage": "" } ,
-        { "idModsGame" : 2 , "mods" : [ 3 , 2 ] , "tacticalImage": "/assets/planes/tactical/TORNADO.jpg" } ,
-        { "idModsGame" : 3 , "mods" : [ 3 , 2 ] , "tacticalImage": "" }
+        { "idModsGame" : 1 , "mods" : [ 3 , 2 ] , "tacticalImage": "/assets/planes/tactical/tornado-upgrades.jpg" } ,
+        { "idModsGame" : 2 , "mods" : [ 3 , 2 ] , "tacticalImage": "/assets/planes/tactical/tornado-upgrades.jpg" } ,
+        { "idModsGame" : 3 , "mods" : [ 3 , 2 ] , "tacticalImage": "/assets/planes/tactical/tornado-upgrades.jpg" }
       ]
     },
     {
@@ -104,9 +109,9 @@
       "image": "/assets/planes/icons/jet-mirage-2000-icon-solid.png",
       "imageBig": "MIRAGE.png",
       "modsGame" : [
-        { "idModsGame" : 1 , "mods" : [ 3 , 2 ] , "tacticalImage": "" } ,
-        { "idModsGame" : 2 , "mods" : [ 3 , 2 ] , "tacticalImage": "/assets/planes/tactical/MIRAGE.jpg" } ,
-        { "idModsGame" : 3 , "mods" : [ 3 , 2 ] , "tacticalImage": "" }
+        { "idModsGame" : 1 , "mods" : [ 3 , 2 ] , "tacticalImage": "/assets/planes/tactical/mirage-2000-upgrades.jpg" } ,
+        { "idModsGame" : 2 , "mods" : [ 3 , 2 ] , "tacticalImage": "/assets/planes/tactical/mirage-2000-upgrades.jpg" } ,
+        { "idModsGame" : 3 , "mods" : [ 3 , 2 ] , "tacticalImage": "/assets/planes/tactical/mirage-2000-upgrades.jpg" }
       ]
     },
     {
@@ -116,9 +121,9 @@
       "image": "/assets/planes/icons/jet-jas39e-gripen-icon-solid.png",
       "imageBig": "JAS39.png",
       "modsGame" : [
-        { "idModsGame" : 1 , "mods" : [ 3 , 2 ] , "tacticalImage": "" } ,
-        { "idModsGame" : 2 , "mods" : [ 3 , 2 ] , "tacticalImage": "/assets/planes/tactical/JAS39.jpg" } ,
-        { "idModsGame" : 3 , "mods" : [ 3 , 2 ] , "tacticalImage": "" }
+        { "idModsGame" : 1 , "mods" : [ 3 , 2 ] , "tacticalImage": "/assets/planes/tactical/jas39e-gripen-upgrades.jpg" } ,
+        { "idModsGame" : 2 , "mods" : [ 3 , 2 ] , "tacticalImage": "/assets/planes/tactical/jas39e-gripen-upgrades.jpg" } ,
+        { "idModsGame" : 3 , "mods" : [ 3 , 2 ] , "tacticalImage": "/assets/planes/tactical/jas39e-gripen-upgrades.jpg" }
       ]
     },
     {
@@ -138,7 +143,12 @@
       "subName": "Farmer",
       "type": "Light Fighter",
       "image": "/assets/planes/icons/jet-mig19-icon-solid.png",
-      "imageBig": "MiG-19.png"
+      "imageBig": "MiG-19.png",
+      "modsGame" : [
+        { "idModsGame" : 1 , "mods" : [ 3 , 2 ] , "tacticalImage": "/assets/planes/tactical/mig19p-upgrades.jpg" } ,
+        { "idModsGame" : 2 , "mods" : [ 3 , 2 ] , "tacticalImage": "/assets/planes/tactical/mig19p-upgrades.jpg" } ,
+        { "idModsGame" : 3 , "mods" : [ 3 , 2 ] , "tacticalImage": "/assets/planes/tactical/mig19p-upgrades.jpg" }
+      ]
     },
     {
       "name": "FGR4",
@@ -154,9 +164,9 @@
       "image": "/assets/planes/icons/jet-mirage-f1c-icon-solid.png",
       "imageBig": "F1.png",
       "modsGame" : [
-        { "idModsGame" : 1 , "mods" : [ 3 , 2 ] , "tacticalImage": "" } ,
-        { "idModsGame" : 2 , "mods" : [ 3 , 2 ] , "tacticalImage": "/assets/planes/tactical/F1.png" } ,
-        { "idModsGame" : 3 , "mods" : [ 3 , 2 ] , "tacticalImage": "" }
+        { "idModsGame" : 1 , "mods" : [ 3 , 2 ] , "tacticalImage": "/assets/planes/tactical/mirage-f1-upgrades.jpg" } ,
+        { "idModsGame" : 2 , "mods" : [ 3 , 2 ] , "tacticalImage": "/assets/planes/tactical/mirage-f1-upgrades.jpg" } ,
+        { "idModsGame" : 3 , "mods" : [ 3 , 2 ] , "tacticalImage": "/assets/planes/tactical/mirage-f1-upgrades.jpg" }
       ]
     },
     {
@@ -178,9 +188,9 @@
       "image": "/assets/planes/icons/jet-ja37di-viggen-icon-solid.png",
       "imageBig": "JA37.png",
       "modsGame" : [
-        { "idModsGame" : 1 , "mods" : [ 3 , 2 ] , "tacticalImage": "" } ,
-        { "idModsGame" : 2 , "mods" : [ 3 , 2 ] , "tacticalImage": "/assets/planes/tactical/JA37.png" } ,
-        { "idModsGame" : 3 , "mods" : [ 3 , 2 ] , "tacticalImage": "" }
+        { "idModsGame" : 1 , "mods" : [ 3 , 2 ] , "tacticalImage": "/assets/planes/tactical/ja37di-viggen-upgrades.jpg" } ,
+        { "idModsGame" : 2 , "mods" : [ 3 , 2 ] , "tacticalImage": "/assets/planes/tactical/ja37di-viggen-upgrades.jpg" } ,
+        { "idModsGame" : 3 , "mods" : [ 3 , 2 ] , "tacticalImage": "/assets/planes/tactical/ja37di-viggen-upgrades.jpg" }
       ]
     },
     {
@@ -216,9 +226,9 @@
       "image": "/assets/planes/icons/jet-jaguar-icon-solid.png",
       "imageBig": "GR3.png",
       "modsGame" : [
-        { "idModsGame" : 1 , "mods" : [ 3 , 2 ] , "tacticalImage": "" } ,
-        { "idModsGame" : 2 , "mods" : [ 3 , 2 ] , "tacticalImage": "/assets/planes/tactical/GR3.jpg" } ,
-        { "idModsGame" : 3 , "mods" : [ 3 , 2 ] , "tacticalImage": "" }
+        { "idModsGame" : 1 , "mods" : [ 3 , 2 ] , "tacticalImage": "/assets/planes/tactical/jaguar-upgrades.jpg" } ,
+        { "idModsGame" : 2 , "mods" : [ 3 , 2 ] , "tacticalImage": "/assets/planes/tactical/jaguar-upgrades.jpg" } ,
+        { "idModsGame" : 3 , "mods" : [ 3 , 2 ] , "tacticalImage": "/assets/planes/tactical/jaguar-upgrades.jpg" }
       ]
     },
     {
@@ -233,14 +243,24 @@
       "subName": "Raptor",
       "type": "Heavy Fighter",
       "image": "/assets/planes/icons/jet-f22-icon-solid.png",
-      "imageBig": "F-22.png"
+      "imageBig": "F-22.png",
+      "modsGame" : [
+        { "idModsGame" : 1 , "mods" : [ 3 , 2 ] , "tacticalImage": "/assets/planes/tactical/f22a-upgrades.jpg" } ,
+        { "idModsGame" : 2 , "mods" : [ 3 , 2 ] , "tacticalImage": "/assets/planes/tactical/f22a-upgrades.jpg" } ,
+        { "idModsGame" : 3 , "mods" : [ 3 , 2 ] , "tacticalImage": "/assets/planes/tactical/f22a-upgrades.jpg" }
+      ]
     },
     {
       "name": "F-5",
       "subName": "Tiger",
       "type": "Light Fighter",
       "image": "/assets/planes/icons/jet-f5-icon-solid.png",
-      "imageBig": "F-5.png"
+      "imageBig": "F-5.png",
+      "modsGame" : [
+        { "idModsGame" : 1 , "mods" : [ 3 , 2 ] , "tacticalImage": "/assets/planes/tactical/f5e-upgrades.jpg" } ,
+        { "idModsGame" : 2 , "mods" : [ 3 , 2 ] , "tacticalImage": "/assets/planes/tactical/f5e-upgrades.jpg" } ,
+        { "idModsGame" : 3 , "mods" : [ 3 , 2 ] , "tacticalImage": "/assets/planes/tactical/f5e-upgrades.jpg" }
+      ]
     },
     {
       "name": "F-35",
