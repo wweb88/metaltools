@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect, useMemo } from "react";
-import { Plane, Loader2, Images, X, ZoomIn, ZoomOut } from "lucide-react";
+import { Plane, Loader2, Images, X, ZoomIn, ZoomOut, Info } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/i18n/LanguageContext";
 import {
@@ -107,18 +107,30 @@ export function HangarClient() {
 
   return (
     <div className="max-w-[1600px] mx-auto p-4 md:p-8 space-y-8">
-      <div className="flex items-center gap-3">
-        <Plane className="w-7 h-7 text-[var(--color-gaming-secondary)] shrink-0" />
-        <div>
-          <h1 className="text-3xl font-black text-white uppercase tracking-wider">
-            {t.hangarPage.title}
-          </h1>
-          <p className="text-gray-400 text-sm md:text-base flex flex-wrap items-center gap-1.5">
-            <span>{t.hangarPage.subtitlePart1}</span>
-            <span className="inline-flex items-center justify-center p-1.5 bg-black/60 text-[var(--color-gaming-accent)] rounded-lg border border-[var(--color-gaming-accent)]/50">
-              <Images className="w-4 h-4" />
-            </span>
-            <span>{t.hangarPage.subtitlePart2}</span>
+      <div className="space-y-4">
+        <div className="flex items-center gap-3">
+          <Plane className="w-7 h-7 text-[var(--color-gaming-secondary)] shrink-0" />
+          <div>
+            <h1 className="text-3xl font-black text-white uppercase tracking-wider">
+              {t.hangarPage.title}
+            </h1>
+            <p className="text-gray-400 text-sm md:text-base flex flex-wrap items-center gap-1.5">
+              <span>{t.hangarPage.subtitlePart1}</span>
+              <span className="inline-flex items-center justify-center p-1.5 bg-black/60 text-[var(--color-gaming-accent)] rounded-lg border border-[var(--color-gaming-accent)]/50">
+                <Images className="w-4 h-4" />
+              </span>
+              <span>{t.hangarPage.subtitlePart2}</span>
+            </p>
+          </div>
+        </div>
+
+        <div className="bg-[#1c222b]/80 border-l-4 border-l-amber-400 border border-white/10 p-4 rounded-xl flex items-start gap-3 shadow-lg backdrop-blur-md">
+          <Info className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
+          <p className="text-gray-300 text-sm md:text-base leading-relaxed">
+            <strong className="text-amber-400 font-bold uppercase tracking-wider mr-2 text-xs md:text-sm">
+              {t.hangarPage.noticeTitle}:
+            </strong>
+            {t.hangarPage.notice}
           </p>
         </div>
       </div>

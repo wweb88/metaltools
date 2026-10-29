@@ -31,7 +31,7 @@ export const translations = {
       systemsSectionTitle: "Sistemas del Avión",
       tabsSystemsLabel: "Pestañas / Sistemas",
       tabsSystemsTooltip:
-        'Número total de sistemas principales que tiene el avión (Fuselaje, Motores, Aviónica, Cañones, etc.). No cuentes la primera pestaña "Aeronave" porque no usa piezas de sistema.',
+        'Número total de sistemas principales que tiene el avión (no cuentes la primera pestaña "Aeronave" porque no usa piezas de sistema).\n\nEjemplo:\n• Si seleccionas 1: sería Fuselaje\n• Si seleccionas 2: sería Fuselaje + Motores\n• Si seleccionas 3: sería Fuselaje + Motores + Aviónica... etc.',
       secondaryBranchesLabel: "Ramas Sec. (Nvl 5+)",
       secondaryBranchesTooltip:
         "Cantidad de armas secundarias (usualmente misiles) que tiene tu avión. Estas mejoras aparecen a partir del Nivel 5 del avión y tienen un costo de recursos ligeramente distinto.",
@@ -49,6 +49,9 @@ export const translations = {
       subtitlePart1:
         "Catálogo completo de aeronaves disponibles por rol de combate. En algunos aviones te dejo una guía opcional",
       subtitlePart2: "si es que no sabes qué mejora subir.",
+      noticeTitle: "Nota",
+      notice:
+        "Esta sección aún la estoy trabajando, me faltan muchos aviones por subir. También se debe considerar que está pensado para niveles 20 por el momento.",
       filterAndSort: "FILTRAR Y ORDENAR",
       roleFilter: "FILTRO DE ROL",
       gameModeFilter: "MODO DE JUEGO",
@@ -100,7 +103,7 @@ export const translations = {
       systemsSectionTitle: "Aircraft Systems",
       tabsSystemsLabel: "Tabs / Systems",
       tabsSystemsTooltip:
-        'Total number of main systems your aircraft has (Airframe, Engines, Avionics, Cannons, etc.). Do not count the first "Aircraft" tab as it does not use system parts.',
+        'Total number of main systems your aircraft has (do not count the first "Aircraft" tab as it does not use system parts).\n\nExample:\n• If you select 1: Fuselage\n• If you select 2: Fuselage + Engines\n• If you select 3: Fuselage + Engines + Avionics... etc.',
       secondaryBranchesLabel: "Sec. Branches (Lvl 5+)",
       secondaryBranchesTooltip:
         "Number of secondary weapons (usually missiles) your aircraft has. These upgrades appear starting at Aircraft Level 5 and have a slightly different resource cost.",
@@ -118,6 +121,9 @@ export const translations = {
       subtitlePart1:
         "Full catalog of available aircraft by combat role. On some aircraft you'll find an optional guide",
       subtitlePart2: "in case you don't know which upgrade to level up.",
+      noticeTitle: "Note",
+      notice:
+        "This section is still a work in progress; many aircraft are yet to be added. Please also note that it is currently intended for Level 20 aircraft.",
       filterAndSort: "FILTER AND SORT",
       roleFilter: "ROLE FILTER",
       gameModeFilter: "GAME MODE",

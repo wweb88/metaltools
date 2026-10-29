@@ -1,7 +1,7 @@
 "use client";
 import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Settings2, Target, Info } from "lucide-react";
+import { Settings2, Target, Info } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const LEVEL_DATA = [
@@ -37,13 +37,6 @@ const SYSTEM_FIRST_DATA = [
   { from: 7, to: 8, silver: 3500, systemParts: 1500, advancedParts: 1 },
 ];
 
-const SYSTEM_SECOND_DATA = [
-  { from: 4, to: 5, silver: 400, systemParts: 170, advancedParts: 0 },
-  { from: 5, to: 6, silver: 525, systemParts: 220, advancedParts: 0 },
-  { from: 6, to: 7, silver: 675, systemParts: 260, advancedParts: 0 },
-  { from: 7, to: 8, silver: 900, systemParts: 350, advancedParts: 0 },
-];
-
 export function LevelCalculatorClient() {
   const { t } = useLanguage();
   const [currentLevel, setCurrentLevel] = useState<number>(1);
@@ -52,7 +45,6 @@ export function LevelCalculatorClient() {
   const [sysCurrentLevel, setSysCurrentLevel] = useState<number>(0);
   const [sysTargetLevel, setSysTargetLevel] = useState<number>(1);
   const [systemCount, setSystemCount] = useState<number>(1);
-  const [secondaryBranchCount, setSecondaryBranchCount] = useState<number>(0);
 
   const planeCurrentOptions = Array.from({ length: 19 }, (_, i) => i + 1);
   const planeTargetOptions = Array.from({ length: 20 - currentLevel }, (_, i) => i + currentLevel + 1);
@@ -72,22 +64,15 @@ export function LevelCalculatorClient() {
     let parts = 0;
     let adv = 0;
 
-    const firstSteps = SYSTEM_FIRST_DATA.filter(s => s.from >= sysCurrentLevel && s.to <= sysTargetLevel);
-    firstSteps.forEach(s => {
+    const steps = SYSTEM_FIRST_DATA.filter(s => s.from >= sysCurrentLevel && s.to <= sysTargetLevel);
+    steps.forEach(s => {
       silver += s.silver * systemCount;
       parts += s.systemParts * systemCount;
       adv += s.advancedParts * systemCount;
     });
 
-    const secondSteps = SYSTEM_SECOND_DATA.filter(s => s.from >= sysCurrentLevel && s.to <= sysTargetLevel);
-    secondSteps.forEach(s => {
-      silver += s.silver * secondaryBranchCount;
-      parts += s.systemParts * secondaryBranchCount;
-      adv += s.advancedParts * secondaryBranchCount;
-    });
-
     return { sysSilver: silver, sysParts: parts, advParts: adv };
-  }, [sysCurrentLevel, sysTargetLevel, systemCount, secondaryBranchCount]);
+  }, [sysCurrentLevel, sysTargetLevel, systemCount]);
 
   const handlePlaneCurrentChange = (val: number) => {
     setCurrentLevel(val);
@@ -130,12 +115,6 @@ export function LevelCalculatorClient() {
                 >
                   {planeCurrentOptions.map(n => <option key={n} value={n}>{t.levelCalculator.levelOption} {n}</option>)}
                 </select>
-              </div>
-
-              <div className="flex justify-center">
-                <div className="bg-white/5 p-3 rounded-full">
-                  <ArrowRight className="w-6 h-6 text-gray-400 rotate-90 md:rotate-0" />
-                </div>
               </div>
 
               <div className="space-y-2">
@@ -197,55 +176,37 @@ export function LevelCalculatorClient() {
               <div className="absolute top-0 right-0 p-32 bg-[var(--color-gaming-secondary)] opacity-5 blur-[100px] rounded-full"></div>
             </div>
             
-            <div className="grid grid-cols-2 gap-4">
+            <div className="space-y-6">
               <div className="space-y-2">
                 <div className="flex items-center gap-2 relative group w-fit">
-                  <label className="text-xs font-bold text-gray-400 uppercase tracking-wider cursor-help">{t.levelCalculator.tabsSystemsLabel}</label>
+                  <label className="text-sm font-bold text-gray-400 uppercase tracking-wider cursor-help">{t.levelCalculator.tabsSystemsLabel}</label>
                   <Info className="w-4 h-4 text-gray-500 cursor-help" />
-                  <div className="absolute bottom-full mb-2 left-0 hidden group-hover:block w-64 p-3 bg-[#0b0f19] border border-[var(--color-gaming-secondary)] rounded-lg text-xs text-gray-300 z-50 shadow-2xl">
+                  <div className="absolute bottom-full mb-2 left-0 hidden group-hover:block w-72 sm:w-80 p-3 bg-[#0b0f19] border border-[var(--color-gaming-secondary)] rounded-lg text-xs text-gray-300 leading-relaxed z-50 shadow-2xl whitespace-pre-line pointer-events-none">
                     {t.levelCalculator.tabsSystemsTooltip}
                   </div>
                 </div>
-                <select value={systemCount} onChange={(e) => {
-                  const newCount = Number(e.target.value);
-                  setSystemCount(newCount);
-                  if (secondaryBranchCount > newCount) setSecondaryBranchCount(newCount);
-                }} className="w-full bg-black/60 border-2 border-white/10 rounded-xl px-4 py-3 text-lg font-black text-white focus:outline-none focus:border-[var(--color-gaming-secondary)] transition-colors">
+                <select 
+                  value={systemCount} 
+                  onChange={(e) => setSystemCount(Number(e.target.value))} 
+                  className="w-full bg-black/60 border-2 border-white/10 rounded-xl px-4 py-4 text-xl font-black text-white focus:outline-none focus:border-[var(--color-gaming-secondary)] transition-colors"
+                >
                   {[1, 2, 3, 4, 5, 6].map(n => <option key={n} value={n}>{n}</option>)}
                 </select>
               </div>
+
               <div className="space-y-2">
-                <div className="flex items-center gap-2 relative group w-fit">
-                  <label className="text-xs font-bold text-gray-400 uppercase tracking-wider cursor-help">{t.levelCalculator.secondaryBranchesLabel}</label>
-                  <Info className="w-4 h-4 text-gray-500 cursor-help" />
-                  <div className="absolute bottom-full mb-2 left-0 hidden group-hover:block w-64 p-3 bg-[#0b0f19] border border-[var(--color-gaming-secondary)] rounded-lg text-xs text-gray-300 z-50 shadow-2xl">
-                    {t.levelCalculator.secondaryBranchesTooltip}
-                  </div>
-                </div>
-                <select value={secondaryBranchCount} onChange={(e) => setSecondaryBranchCount(Number(e.target.value))} className="w-full bg-black/60 border-2 border-white/10 rounded-xl px-4 py-3 text-lg font-black text-white focus:outline-none focus:border-[var(--color-gaming-secondary)] transition-colors">
-                  {Array.from({ length: systemCount + 1 }, (_, i) => <option key={i} value={i}>{i}</option>)}
+                <label className="text-sm font-bold text-gray-400 uppercase tracking-wider">{t.levelCalculator.currentLevel}</label>
+                <select value={sysCurrentLevel} onChange={(e) => handleSysCurrentChange(Number(e.target.value))} className="w-full bg-black/60 border-2 border-white/10 rounded-xl px-4 py-4 text-xl font-black text-white focus:outline-none focus:border-[var(--color-gaming-secondary)] transition-colors">
+                  {sysCurrentOptions.map(n => <option key={n} value={n}>{t.levelCalculator.levelOption} {n}</option>)}
                 </select>
               </div>
-            </div>
 
-            <div className="space-y-2 mt-4">
-              <label className="text-sm font-bold text-gray-400 uppercase tracking-wider">{t.levelCalculator.currentLevel}</label>
-              <select value={sysCurrentLevel} onChange={(e) => handleSysCurrentChange(Number(e.target.value))} className="w-full bg-black/60 border-2 border-white/10 rounded-xl px-4 py-4 text-xl font-black text-white focus:outline-none focus:border-[var(--color-gaming-secondary)] transition-colors">
-                {sysCurrentOptions.map(n => <option key={n} value={n}>{t.levelCalculator.levelOption} {n}</option>)}
-              </select>
-            </div>
-
-            <div className="flex justify-center py-2">
-              <div className="bg-white/5 p-3 rounded-full">
-                <ArrowRight className="w-6 h-6 text-gray-400 rotate-90 md:rotate-0" />
+              <div className="space-y-2">
+                <label className="text-sm font-bold text-gray-400 uppercase tracking-wider">{t.levelCalculator.targetLevel}</label>
+                <select value={sysTargetLevel} onChange={(e) => setSysTargetLevel(Number(e.target.value))} className="w-full bg-black/60 border-2 border-white/10 rounded-xl px-4 py-4 text-xl font-black text-[var(--color-gaming-secondary)] focus:outline-none focus:border-[var(--color-gaming-secondary)] transition-colors">
+                  {sysTargetOptions.map(n => <option key={n} value={n}>{t.levelCalculator.levelOption} {n}</option>)}
+                </select>
               </div>
-            </div>
-
-            <div className="space-y-2">
-              <label className="text-sm font-bold text-gray-400 uppercase tracking-wider">{t.levelCalculator.targetLevel}</label>
-              <select value={sysTargetLevel} onChange={(e) => setSysTargetLevel(Number(e.target.value))} className="w-full bg-black/60 border-2 border-white/10 rounded-xl px-4 py-4 text-xl font-black text-[var(--color-gaming-secondary)] focus:outline-none focus:border-[var(--color-gaming-secondary)] transition-colors">
-                {sysTargetOptions.map(n => <option key={n} value={n}>{t.levelCalculator.levelOption} {n}</option>)}
-              </select>
             </div>
           </div>
 
