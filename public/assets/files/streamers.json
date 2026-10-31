@@ -1,0 +1,55 @@
+{
+  "streamers": [
+    {
+      "id": 1,
+      "name": "ViperActual",
+      "tag": "@viperactual_ms",
+      "avatar": "/assets/images/logo.jpg",
+      "language": "ES",
+      "description": {
+        "es": "Creador de contenido competitivo de Metalstorm. Directos diarios analizando tácticas de escuadrón, rutas de mapas y mejores configuraciones de modificadores.",
+        "en": "Competitive Metalstorm content creator. Daily streams analyzing squadron tactics, map routes, and top modifier builds."
+      },
+      "socials": {
+        "twitch": "https://twitch.tv/",
+        "youtube": "https://youtube.com/",
+        "tiktok": "https://tiktok.com/",
+        "discord": "https://discord.com/"
+      }
+    },
+    {
+      "id": 2,
+      "name": "NovaStrike",
+      "tag": "@novastrike_jet",
+      "avatar": "/assets/images/logo.jpg",
+      "language": "ES / EN",
+      "description": {
+        "es": "Especialista en Cazas Pesados e Interceptores. Guías en video para subir de nivel rápido, partidas con seguidores y torneos comunitarios cada fin de semana.",
+        "en": "Heavy Fighter & Interceptor specialist. Video guides on fast leveling, viewer games, and weekend community tournaments."
+      },
+      "socials": {
+        "youtube": "https://youtube.com/",
+        "kick": "https://kick.com/",
+        "instagram": "https://instagram.com/",
+        "twitter": "https://x.com/"
+      }
+    },
+    {
+      "id": 3,
+      "name": "KronoPilot",
+      "tag": "@kronopilot",
+      "avatar": "/assets/images/logo.jpg",
+      "language": "EN",
+      "description": {
+        "es": "Piloto top en combates cerrados (Dogfights) y análisis de parches. Clips cortos de jugadas agresivas y comparativas de armamento.",
+        "en": "Top dogfighter and patch notes analyst. High-octane gameplay clips, weapon comparisons, and high-trophy squadron runs."
+      },
+      "socials": {
+        "twitch": "https://twitch.tv/",
+        "tiktok": "https://tiktok.com/",
+        "youtube": "https://youtube.com/",
+        "twitter": "https://x.com/"
+      }
+    }
+  ]
+}

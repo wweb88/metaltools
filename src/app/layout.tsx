@@ -40,11 +40,11 @@ export default function RootLayout({
       className={`${rajdhani.variable} ${rajdhani.className} h-full antialiased`}
       suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col relative" suppressHydrationWarning>
+      <body className="min-h-screen flex flex-col md:flex-row relative" suppressHydrationWarning>
         <div className="fixed inset-0 z-[-1] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-900/20 via-[#0b0f19] to-[#0b0f19]"></div>
         <LanguageProvider>
           <Navbar />
-          <main className="flex-1 w-full relative z-0 flex flex-col">
+          <main className="flex-1 min-w-0 w-full relative z-0 flex flex-col">
             {children}
           </main>
         </LanguageProvider>

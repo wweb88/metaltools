@@ -9,7 +9,7 @@ export default function Home() {
   const { t } = useLanguage();
 
   return (
-    <div className="relative flex-1 flex flex-col justify-center items-center min-h-[calc(100vh-80px)] text-center p-6 overflow-hidden">
+    <div className="relative flex-1 flex flex-col justify-center items-center min-h-[calc(100vh-64px)] md:min-h-screen text-center p-6 overflow-hidden">
       <Hero3DWrapper />
       
       <div className="relative z-10 flex flex-col items-center justify-center max-w-4xl mx-auto mt-8">

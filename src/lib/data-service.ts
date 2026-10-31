@@ -44,6 +44,28 @@ export interface TypeInfo {
   image: string;
 }
 
+export interface StreamerSocials {
+  twitch?: string;
+  youtube?: string;
+  tiktok?: string;
+  kick?: string;
+  instagram?: string;
+  twitter?: string;
+  discord?: string;
+  facebook?: string;
+  web?: string;
+}
+
+export interface StreamerInfo {
+  id: number | string;
+  name: string;
+  tag?: string;
+  avatar: string;
+  language?: string;
+  description: string | { es: string; en: string };
+  socials: StreamerSocials;
+}
+
 export const TIPOS_AVIONES = [
   'Light Fighter',
   'Medium Fighter',
@@ -98,6 +120,20 @@ export async function fetchModsGamesInfo(): Promise<ModGameInfo[]> {
     return (data.modsGames || []) as ModGameInfo[];
   } catch (error) {
     console.error('Error fetching modsGames from dataInfo.json:', error);
+    return [];
+  }
+}
+
+export async function fetchStreamersInfo(): Promise<StreamerInfo[]> {
+  try {
+    const response = await fetch('/assets/files/streamers.json');
+    if (!response.ok) throw new Error("Network response was not ok");
+    const text = await response.text();
+    const cleanText = text.replace(/^\uFEFF/, '');
+    const data = JSON.parse(cleanText);
+    return (data.streamers || []) as StreamerInfo[];
+  } catch (error) {
+    console.error('Error fetching streamers from streamers.json:', error);
     return [];
   }
 }

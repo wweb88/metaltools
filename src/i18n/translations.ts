@@ -8,6 +8,11 @@ export const translations = {
       levelCalculator: "Calculadora por Nivel",
       rules: "Reglamentos",
       hangar: "Hangar",
+      streamers: "Streamers",
+      collapse: "Contraer menú",
+      expand: "Expandir menú",
+      language: "Idioma",
+      menu: "Menú",
     },
     home: {
       welcomePrefix: "¡Bienvenido,",
@@ -72,6 +77,22 @@ export const translations = {
         3: "Objetivo prioritario",
       },
     },
+    streamersPage: {
+      badge: "Creadores de Contenido",
+      title: "Streamers y Creadores",
+      subtitle:
+        "Conoce a los pilotos que transmiten en vivo, crean guías tácticas y mantienen activa a la comunidad de Metalstorm. ¡Síguelos en sus redes!",
+      socialsLabel: "Redes Oficiales",
+      languageBadge: "Idioma",
+      joinTitle: "¿Eres creador de contenido de Metalstorm?",
+      joinSubtitle:
+        "Si haces directos o subes contenido de Metalstorm y quieres aparecer en esta sección, contáctame directamente dentro del juego como",
+      joinFreeNote:
+        "Esto no tiene ningún costo, es únicamente para apoyar y dar visibilidad a la comunidad.",
+      contactLabel: "Contacto en el juego",
+      copied: "¡Copiado!",
+      copyCode: "Copiar código",
+    },
   },
   en: {
     nav: {
@@ -80,6 +101,11 @@ export const translations = {
       levelCalculator: "Level Calculator",
       rules: "Rules",
       hangar: "Hangar",
+      streamers: "Streamers",
+      collapse: "Collapse menu",
+      expand: "Expand menu",
+      language: "Language",
+      menu: "Menu",
     },
     home: {
       welcomePrefix: "Welcome,",
@@ -143,6 +169,22 @@ export const translations = {
         2: "Team Deathmatch",
         3: "Priority Target",
       },
+    },
+    streamersPage: {
+      badge: "Content Creators",
+      title: "Streamers & Creators",
+      subtitle:
+        "Meet the pilots streaming live, creating tactical guides, and keeping the Metalstorm community thriving. Follow them on their channels!",
+      socialsLabel: "Official Channels",
+      languageBadge: "Language",
+      joinTitle: "Are you a Metalstorm content creator?",
+      joinSubtitle:
+        "If you stream or create Metalstorm videos and want to be featured in this section, contact me directly in-game as",
+      joinFreeNote:
+        "This has no cost at all — it is purely to support and give visibility to the community.",
+      contactLabel: "In-game contact",
+      copied: "Copied!",
+      copyCode: "Copy code",
     },
   },
 } as const;
