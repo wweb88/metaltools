@@ -61,6 +61,7 @@ export interface StreamerInfo {
   name: string;
   tag?: string;
   avatar: string;
+  country?: string;
   language?: string;
   description: string | { es: string; en: string };
   socials: StreamerSocials;

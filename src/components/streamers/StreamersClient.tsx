@@ -117,6 +117,15 @@ const SOCIAL_CONFIG: Record<SocialKey, SocialConfig> = {
   },
 };
 
+function getFlagUrl(country?: string): string | null {
+  if (!country) return null;
+  const trimmed = country.trim();
+  if (trimmed.startsWith("/") || trimmed.startsWith("http")) {
+    return trimmed;
+  }
+  return `https://flagcdn.com/w40/${trimmed.toLowerCase()}.png`;
+}
+
 export function StreamersClient() {
   const { language, t } = useLanguage();
   const [streamers, setStreamers] = useState<StreamerInfo[]>([]);
@@ -185,6 +194,8 @@ export function StreamersClient() {
             ([key, url]) => Boolean(url) && key in SOCIAL_CONFIG
           ) as [SocialKey, string][];
 
+          const flagUrl = getFlagUrl(streamer.country);
+
           return (
             <motion.article
               key={streamer.id}
@@ -215,9 +226,19 @@ export function StreamersClient() {
                     </div>
 
                     <div className="min-w-0">
-                      <h2 className="text-2xl font-black uppercase tracking-wider text-white truncate group-hover:text-[var(--color-gaming-accent)] transition-colors">
-                        {streamer.name}
-                      </h2>
+                      <div className="flex items-center gap-2.5">
+                        <h2 className="text-2xl font-black uppercase tracking-wider text-white truncate group-hover:text-[var(--color-gaming-accent)] transition-colors">
+                          {streamer.name}
+                        </h2>
+                        {flagUrl && (
+                          <img
+                            src={flagUrl}
+                            alt={streamer.country || "Flag"}
+                            title={streamer.country?.toUpperCase()}
+                            className="w-6 h-4 object-cover rounded-[3px] border border-white/20 shadow-[0_0_8px_rgba(0,0,0,0.6)] shrink-0"
+                          />
+                        )}
+                      </div>
                       {streamer.tag && (
                         <p className="text-xs font-bold tracking-wider text-gray-400 truncate">
                           {streamer.tag}

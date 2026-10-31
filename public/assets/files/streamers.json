@@ -5,6 +5,7 @@
       "name": "ViperActual",
       "tag": "@viperactual_ms",
       "avatar": "/assets/images/logo.jpg",
+      "country": "CL",
       "language": "ES",
       "description": {
         "es": "Creador de contenido competitivo de Metalstorm. Directos diarios analizando tácticas de escuadrón, rutas de mapas y mejores configuraciones de modificadores.",
@@ -22,6 +23,7 @@
       "name": "NovaStrike",
       "tag": "@novastrike_jet",
       "avatar": "/assets/images/logo.jpg",
+      "country": "MX",
       "language": "ES / EN",
       "description": {
         "es": "Especialista en Cazas Pesados e Interceptores. Guías en video para subir de nivel rápido, partidas con seguidores y torneos comunitarios cada fin de semana.",
@@ -39,6 +41,7 @@
       "name": "KronoPilot",
       "tag": "@kronopilot",
       "avatar": "/assets/images/logo.jpg",
+      "country": "US",
       "language": "EN",
       "description": {
         "es": "Piloto top en combates cerrados (Dogfights) y análisis de parches. Clips cortos de jugadas agresivas y comparativas de armamento.",
