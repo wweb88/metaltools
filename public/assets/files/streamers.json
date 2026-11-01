@@ -29,23 +29,6 @@
       "socials": {
         "tiktok": "https://www.tiktok.com/@septi_chl"
       }
-    },
-    {
-      "id": 3,
-      "name": "KronoPilot",
-      "tag": "@kronopilot",
-      "avatar": "/assets/images/logo.jpg",
-      "country": "US",
-      "language": "EN",
-      "description": {
-        "es": "Piloto top en combates cerrados (Dogfights) y análisis de parches. Clips cortos de jugadas agresivas y comparativas de armamento.",
-        "en": "Top dogfighter and patch notes analyst. High-octane gameplay clips, weapon comparisons, and high-trophy squadron runs."
-      },
-      "socials": {
-        "twitch": "https://twitch.tv/",
-        "youtube": "https://youtube.com/",
-        "twitter": "https://x.com/"
-      }
     }
   ]
 }
