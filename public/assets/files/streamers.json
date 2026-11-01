@@ -2,20 +2,17 @@
   "streamers": [
     {
       "id": 1,
-      "name": "ViperActual",
-      "tag": "@viperactual_ms",
-      "avatar": "/assets/images/logo.jpg",
-      "country": "CL",
-      "language": "ES",
+      "name": "Bruce",
+      "tag": "@brucegrover84",
+      "avatar": "/assets/images/streamers/brucegrover84.jpg",
+      "country": "US",
+      "language": "EN",
       "description": {
-        "es": "Creador de contenido competitivo de Metalstorm. Directos diarios analizando tácticas de escuadrón, rutas de mapas y mejores configuraciones de modificadores.",
-        "en": "Competitive Metalstorm content creator. Daily streams analyzing squadron tactics, map routes, and top modifier builds."
+        "es": "¡Todo sobre Metalstorm! Vídeos de vuelo, mejoras, consejos y trucos, tutoriales, oro, plata y piezas gratis, ¡y mucho más!",
+        "en": "EVERYTHING Metalstorm! Flight videos, Upgrades, Tips and Tricks, How-to videos, free gold, silver and parts, and much more."
       },
       "socials": {
-        "twitch": "https://twitch.tv/",
-        "youtube": "https://youtube.com/",
-        "tiktok": "https://tiktok.com/",
-        "discord": "https://discord.com/"
+        "youtube": "https://www.youtube.com/@brucegrover84"
       }
     },
     {
