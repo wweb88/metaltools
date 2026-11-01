@@ -17,20 +17,17 @@
     },
     {
       "id": 2,
-      "name": "NovaStrike",
-      "tag": "@novastrike_jet",
-      "avatar": "/assets/images/logo.jpg",
-      "country": "MX",
+      "name": "Septi",
+      "tag": "@septi_chl",
+      "avatar": "/assets/images/streamers/septi.jpeg",
+      "country": "CL",
       "language": "ES / EN",
       "description": {
-        "es": "Especialista en Cazas Pesados e Interceptores. Guías en video para subir de nivel rápido, partidas con seguidores y torneos comunitarios cada fin de semana.",
-        "en": "Heavy Fighter & Interceptor specialist. Video guides on fast leveling, viewer games, and weekend community tournaments."
+        "es": "Jugador de Metalstorm gran maestro+40.000 trofeos, miembros de X Factor. jugador competitivo nuevo en la plataforma",
+        "en": "Metalstorm player, Grandmaster rank, 40,000+ trophies, member of X Factor. Competitive player, new to the platform."
       },
       "socials": {
-        "youtube": "https://youtube.com/",
-        "kick": "https://kick.com/",
-        "instagram": "https://instagram.com/",
-        "twitter": "https://x.com/"
+        "tiktok": "https://www.tiktok.com/@septi_chl"
       }
     },
     {
@@ -46,7 +43,6 @@
       },
       "socials": {
         "twitch": "https://twitch.tv/",
-        "tiktok": "https://tiktok.com/",
         "youtube": "https://youtube.com/",
         "twitter": "https://x.com/"
       }
