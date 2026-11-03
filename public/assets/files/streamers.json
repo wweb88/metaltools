@@ -29,6 +29,21 @@
       "socials": {
         "tiktok": "https://www.tiktok.com/@septi_chl"
       }
+    },
+    {
+      "id": 3,
+      "name": "DeusVult",
+      "tag": "@deusvult_01",
+      "avatar": "/assets/images/streamers/deusvult.jpeg",
+      "country": "CL",
+      "language": "ES",
+      "description": {
+        "es": "METALSTORM Grand Master. Øɖɨn'ѕ ƉєɱɨѕɆ - 7 Global y subiendo.",
+        "en": "METALSTORM Grand Master. Øɖɨn'ѕ ƉєɱɨѕɆ - 7 Global and rising."
+      },
+      "socials": {
+        "tiktok": "https://www.tiktok.com/@deusvult_01"
+      }
     }
   ]
 }
