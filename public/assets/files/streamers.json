@@ -44,6 +44,22 @@
       "socials": {
         "tiktok": "https://www.tiktok.com/@deusvult_01"
       }
+    },
+    {
+      "id": 4,
+      "name": "Roy Directo",
+      "tag": "@roydirecto",
+      "avatar": "/assets/images/streamers/roydirecto.jpeg",
+      "country": "AR",
+      "language": "ES",
+      "description": {
+        "es": "Combates aéreos ✈️ Kills limpias + clips épicos diarios",
+        "en": "Aerial combat ✈️ Clean kills + daily epic clips"
+      },
+      "socials": {
+        "tiktok": "https://www.tiktok.com/@roydirecto",
+        "youtube": "https://www.youtube.com/@roydirecto"
+      }
     }
   ]
 }
