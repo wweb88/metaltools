@@ -62,6 +62,21 @@
         "youtube": "https://www.youtube.com/@roydirecto",
         "twitch": "https://www.twitch.tv/roydirecto"
       }
+    },
+    {
+      "id": 5,
+      "name": "VENGADOR.FACH",
+      "tag": "@vengador.fach",
+      "avatar": "/assets/images/streamers/vengador.fach.jpeg",
+      "country": "CL",
+      "language": "ES",
+      "description": {
+        "es": "Piloto amateur en MetalStorm. Creciendo cada día, vamos por más!",
+        "en": "Amateur pilot in MetalStorm. Growing every day—onward and upward!"
+      },
+      "socials": {
+        "tiktok": "https://www.tiktok.com/@vengador.fach"
+      }
     }
   ]
 }
