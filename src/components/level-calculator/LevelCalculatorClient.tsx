@@ -190,7 +190,7 @@ export function LevelCalculatorClient() {
                   onChange={(e) => setSystemCount(Number(e.target.value))} 
                   className="w-full bg-black/60 border-2 border-white/10 rounded-xl px-4 py-4 text-xl font-black text-white focus:outline-none focus:border-[var(--color-gaming-secondary)] transition-colors"
                 >
-                  {[1, 2, 3, 4, 5, 6].map(n => <option key={n} value={n}>{n}</option>)}
+                  {[1, 2, 3, 4, 5, 6, 7].map(n => <option key={n} value={n}>{n}</option>)}
                 </select>
               </div>
 

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Metaltools",
     description: "Administra tu escuadrón, aviones y calcula recursos en Metaltools.",
-    url: "https://metaltools.app",
+    url: "https://metaltools.whiteweb.cl",
     siteName: "Metaltools",
     type: "website",
   },
