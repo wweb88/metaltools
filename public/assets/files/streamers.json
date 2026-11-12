@@ -77,6 +77,21 @@
       "socials": {
         "tiktok": "https://www.tiktok.com/@vengador.fach"
       }
+    },
+    {
+      "id": 6,
+      "name": "🇲🇽Arno☯️🜏🕯️🇲🇽",
+      "tag": "@arno.vt",
+      "avatar": "/assets/images/streamers/arno.vt.jpeg",
+      "country": "MX",
+      "language": "ES",
+      "description": {
+        "es": "Jugador de MetalStorm en PC🛩️🛩️ ☯️🜏🕯️| Ni orden ni caos. Solo voluntad.",
+        "en": "MetalStorm player on PC🛩️🛩️ ☯️🜏🕯️| Neither order nor chaos. Only will."
+      },
+      "socials": {
+        "tiktok": "https://www.tiktok.com/@arno.vt"
+      }
     }
   ]
 }
